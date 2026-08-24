@@ -4,6 +4,18 @@
 
 This is a working agreement. **Locked** = you said it. **Proposed** = my read. **Open** = still blocking. Until remaining sign-off boxes are checked, agents may only revise this agreement.
 
+### What we still need from you
+
+Two things. Everything else is frozen or can default.
+
+1. **Yes to slice 1** — freeze this doc and build: skills (world/AD, kit-plan, Max 2027 craft, UV, QA) + `kit.schema.json` + Max bootstrap (display meters / system cm, grid, naming, menu). No website, no engine plugins, no Field Tracing yet, no hero mesh.
+2. **The first proving-ground place**, even short:
+   - **Place** (one real space, not “a dungeon kit”)
+   - **Camera** (D4-like / third-person / FPS / other)
+   - **Module** (2 m, 4 m, or mixed)
+
+If you want us to pick the place, say so. That is enough to leave vision lock.
+
 ---
 
 ## 1. What this is
@@ -233,7 +245,7 @@ These are hats in the thought process even when one agent wears several. The AD 
 - [x] Engines: Unreal + Source, kits first
 - [x] Agentic UV + plugins-as-needed (incl. Field Tracing Displacement, later)
 - [x] Blizzard-level AD / worldbuilding / env team process
-- [ ] Slice 1 scope
-- [ ] First proving-ground kit: **place, story, camera, module size**
+- [ ] Slice 1 scope (proposed above — needs a yes)
+- [ ] First proving-ground kit: place, camera, module size (or “you pick”)
 
-Until the empty boxes are checked, agents may only revise this agreement.
+Until those two are answered, agents may only revise this agreement.
