@@ -6,10 +6,10 @@ This is a working agreement. **Locked** = you said it. **Proposed** = my read.
 
 ### Slice 1 — locked, in execution
 
-- First PolyKit: **Middlehelm wetlands ruins**, first-person.
-- Primary architectural ref: **Abbaye de Trois-Fontaines**, Trois-Fontaines-l'Abbaye, Marne, Champagne-Ardenne.
-- Grid: **0.5 / 1 / 2 / 4 / 8 m**. Prefer on-grid. Organic and breakage may miss; they still socket to the grid.
-- Build: skills, `contracts/kit.schema.json`, kit brief, Max 2027 bootstrap.
+- Studio: skills, `contracts/kit.schema.json`, Max 2027 **API / CLI / MCP / harness**.
+- Kits live under `kits/` with their own status. Registry: `kits/README.md`.
+- First proving-ground PolyKit (not the house type): **Middlehelm wetlands ruins**, first-person. Ref: **Abbaye de Trois-Fontaines** (church ruin only).
+- Grid default: **0.5 / 1 / 2 / 4 / 8 m**. Prefer on-grid. Organic and breakage may miss; they still socket to the grid.
 - Still out of scope: website, engine plugins, Field Tracing Displacement, hero mesh production.
 
 ---
@@ -19,7 +19,7 @@ This is a working agreement. **Locked** = you said it. **Proposed** = my read.
 **Locked**
 
 - Agentic craft around **3ds Max 2027** for **artist-grade 3D kits**.
-- v1: **you and the agents in this repo**. Others after the tooling is proven.
+- v1: **you and local agents on the Windows PC that has 3ds Max 2027**. Not cloud agents. Others after the tooling is proven.
 - The work is the kit: models, Material IDs, organization, module planning, UVs, nuance. Engines are destinations.
 - Destinations: **Unreal Engine** and **Source Engine**. Craft is **engine-agnostic first**.
 - **Units:** artists work in **meters** (`1.0` = 1 m). The file is **cm-based** so Unreal stays clean. We do not model in centimeters in the viewport.
@@ -36,6 +36,12 @@ PolyCraft is a tiny Blizzard-style kit studio in agent form: AD and worldbuilder
 
 Generated topology can be reference or kickoff. It is never the kit.
 
+### Kits
+
+PolyCraft is the studio. A PolyKit is **one place**. Registry and in-progress status: `kits/README.md`.
+
+Studio law (host, units, default grid, process, harness) is shared. Place, camera, wear, naming prefix, layers, and assembly nodes are per kit. The first proving ground does not make wetlands or church ruins the house style.
+
 ---
 
 ## 2. What this is not
@@ -45,6 +51,7 @@ Generated topology can be reference or kickoff. It is never the kit.
 - Engine-first (Nanite, VMF) before the place exists.
 - A plugin house. **Field Tracing Displacement** and UV/chamfer tools are on the table; they get built when a kit is waiting on them.
 - A second Polygen website, a Grok Bot farm, Max 2024–2026.
+- A **cloud agent** loop. Max is Windows-only (Autodesk does not ship Linux). Wine / KVM-passthrough is not a PolyCraft path. The agent sits on the same PC as 2027.
 
 ---
 
@@ -118,7 +125,7 @@ Skipping 4.1–4.3 and jumping to a wall kit is how you get a technically correc
 1. **Constitution** — this file.
 2. **World + AD** — section 4, written into the kit brief. No geometry.
 3. **Kit plan** — modules, grid, sockets, naming, IDs, UV strategy, instance/XRef.
-4. **Max 2027 bootstrap** — meters display, cm system, grid, snaps, layers, naming, menu.
+4. **Max 2027 via harness** — API/CLI/MCP run studio bootstrap (meters display, cm system, grid, snaps, studio layers). Kit jobs stay under `kits/<id>/max/`.
 5. **Blockout** — socket-proof 3–5 modules.
 6. **Craft** — modifier-first, instance-first, XRef-first.
 7. **UV + IDs** — artist-grade solve here.
@@ -139,7 +146,8 @@ If step 2 is shallow, stop. More thinking. Not more boxes.
 
 | Tool | Job | Status |
 |---|---|---|
-| Scene bootstrap | Units (m display / cm system), grid, snap, naming, layers | Slice 1 |
+| Scene bootstrap | Units (m display / cm system), grid, snap, studio layers | Slice 1 — via harness |
+| API / CLI / MCP / Max listener | Agents run scripts in 2027; no drag-and-drop loop | Slice 1 |
 | UV solver | Artist-grade, kit-aware packing / trim / texel / UV2 | When Unwrap fails the bar |
 | Chamfer profiles | Directable bevels (by ID, angle, post-boolean, width/depth curves) | When Smart Bevel/Chamfer lie |
 | **Field Tracing Displacement** | Build **real polys** from displacement/height — geo where the field actually displaces, not uniform tessellation. Lets texture displacement become performant kit mesh. | When a kit is waiting on it |
@@ -169,7 +177,7 @@ Pass/fail plus a written note. “Pretty good” is not a grade.
 
 **Taste:** ortho shaded/wire/checker, assembled vignette at gameplay camera, wear/trim/hero, vs concept, three-module stale test, **does this kit only work for this place’s story**.
 
-Cloud cannot run Max. Local scripts + images.
+Local Windows agent + the Max harness. Images from that session. No cloud Max.
 
 ---
 
@@ -198,8 +206,8 @@ These are hats in the thought process even when one agent wears several. The AD 
 | # | Question | Status | Answer |
 |---|---|---|---|
 | I1 | Name? | **Locked** | PolyCraft. PolyKit = the kit. |
-| I2 | v1 user? | **Locked** | You + agents here. |
-| I3 | Slice 1? | **Locked** | Skills + kit schema + Max 2027 bootstrap + Middlehelm wetlands brief. No hero mesh. |
+| I2 | v1 user? | **Locked** | You + **local** Cursor agents on the Windows Max 2027 PC. No cloud agents. |
+| I3 | Slice 1? | **Locked** | Skills + kit schema + Max 2027 harness (API/CLI/MCP) + kits registry + first proving-ground brief. No hero mesh. |
 
 ### Ecosystem
 
@@ -218,19 +226,19 @@ These are hats in the thought process even when one agent wears several. The AD 
 | C1 | Engines? | **Locked** | Unreal + Source destinations. Kits first. |
 | C2 | Units? | **Locked** | Display meters (`1.0` = 1 m). System cm. UE: 4 m → 400 uu. |
 | C3 | Grid? | **Locked** | 0.5 / 1 / 2 / 4 / 8 m. Prefer on-grid; exceptions socket back. |
-| C4 | Camera? | **Locked** | First person. Eye ~1.7 m. |
-| C5 | First kit? | **Locked** | Middlehelm overgrown wetland ruins. Ref: Trois-Fontaines abbey. |
-| C6 | Drive Max? | Proposed | Local pymxs / plugins from git. No pretend-Max in the cloud. |
+| C4 | Camera? | **Locked** | Per kit (`brief.camera`). Slice 1 proving ground is FPS, eye ~1.7 m. |
+| C5 | First kit? | **Locked** | Middlehelm wetlands ruins is the first proving ground, not the house kit type. Ref: Trois-Fontaines abbey (church ruin). |
+| C6 | Drive Max? | **Locked** | Local agent on the Windows Max 2027 PC. API + CLI + MCP → localhost harness. Agents run scripts. No cloud agents. No Linux Max. Drag-and-drop is emergency only. |
 
 ---
 
 ## 11. Slice 1 — executing
 
 1. This document — frozen for identity.
-2. Skills: worldbuilding, art-direction, kit-plan, max-2027-craft, artist-UV, visual-QA.
-3. `contracts/kit.schema.json`.
-4. Max 2027 bootstrap: display meters, system cm, 0.5 m home grid, naming, menu.
-5. `kits/middlehelm-wetlands-ruins/` — world/AD brief + machine contract. No hero mesh. No Field Tracing plugin.
+2. Skills: worldbuilding, art-direction, visual-kickoff, kit-plan, max-2027-craft, harness, artist-UV, visual-QA.
+3. `contracts/kit.schema.json` + `contracts/harness.protocol.json`.
+4. Local Windows agent drives Max 2027 via API / CLI / MCP + in-Max listener. Studio bootstrap is a command, not a drag.
+5. `kits/` registry — each kit owns brief, jobs, and prefixed nodes. Slice 1 proving ground: `kits/middlehelm-wetlands-ruins/`.
 
 ---
 
@@ -243,6 +251,8 @@ These are hats in the thought process even when one agent wears several. The AD 
 - [x] Agentic UV + plugins-as-needed (incl. Field Tracing Displacement, later)
 - [x] Blizzard-level AD / worldbuilding / env team process
 - [x] Slice 1 scope
-- [x] First kit: Middlehelm wetlands ruins, FPS, grid 0.5–8 m, ref Trois-Fontaines
+- [x] First proving-ground kit: Middlehelm wetlands ruins (not the house type)
+- [x] Drive Max via API / CLI / MCP / harness
+- [x] Local Windows agents only (no cloud agent loop)
 
-Vision lock for identity is closed. Execute slice 1 against `kits/middlehelm-wetlands-ruins/`.
+Vision lock for identity is closed. Execute slice 1 from `kits/README.md` **in a local Cursor session on the Max PC**.

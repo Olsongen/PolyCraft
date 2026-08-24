@@ -1,5 +1,6 @@
 -- Middlehelm wetlands — FIRST ASSEMBLY (blockout only)
--- Drop AFTER polycraft_bootstrap.ms
+-- Run via: python -m polycraft max job middlehelm-wetlands-ruins first-assembly
+-- This is a kit script. Studio bootstrap must not create MHWR_ nodes.
 -- FPS walk: two 4 m arcade bays + one 8 m wide bay, aisle, waterline, one standing vault.
 -- System units = cm. 1.0 display meter = 100 cm.
 

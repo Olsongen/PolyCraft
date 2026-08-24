@@ -1,32 +1,52 @@
 # PolyCraft
 
-Agentic 3ds Max **2027** craft for artist-grade kits. v1 is Ethan + agents in this repo.
+Agentic 3ds Max **2027** craft for artist-grade kits. v1 is Ethan + **local** Cursor agents on the Windows PC that has Max 2027. Not cloud agents.
 
-**First PolyKit:** Middlehelm wetlands ruins — first person — grid 0.5 / 1 / 2 / 4 / 8 m.  
-**Primary ref:** Abbaye de Trois-Fontaines (church ruin, not the 18th-century gate).
+The product is the **API, CLI, MCP, and harness** — a skillset for agentic kit development. A **PolyKit** is one place. The studio is kit-agnostic.
 
-Units: **display meters** (`1.0` = 1 m), **system centimeters** (Unreal 4 m → 400 uu).
+Units: **display meters** (`1.0` = 1 m), **system centimeters** (Unreal 4 m → 400 uu).  
+Grid default: **0.5 / 1 / 2 / 4 / 8 m**. Prefer on-grid. Exceptions still socket.
+
+## Kits
+
+Registry and status: [`kits/README.md`](kits/README.md).
+
+| Kit | Status | What |
+|---|---|---|
+| [Middlehelm wetlands ruins](kits/middlehelm-wetlands-ruins/) | planned (in progress) | Slice 1 proving ground. FPS. Ref: Trois-Fontaines church ruin only. |
+
+Do not treat the first proving ground as the house kit type.
+
+## Drive Max (local agent)
+
+Open this repo in **Cursor on the Windows Max 2027 PC**. Start Max. Then the local agent runs:
+
+```bash
+python -m polycraft kits
+python -m polycraft validate
+python -m polycraft max status
+python -m polycraft max install-harness    # once
+python -m polycraft max bootstrap
+python -m polycraft max job middlehelm-wetlands-ruins first-assembly
+```
+
+MCP: `.cursor/mcp.json` → `scripts/polycraft_mcp.py`. Same API as the CLI.
+
+Max is Windows-only. No cloud loop. Drag-and-drop is emergency only.
 
 ## Repo map
 
 | Path | What |
 |---|---|
 | [`docs/VISION.md`](docs/VISION.md) | Locked constitution |
-| [`kits/middlehelm-wetlands-ruins/`](kits/middlehelm-wetlands-ruins/) | World/AD brief, FPS concepts (GPT Image 2.0) |
-| [`contracts/kit.schema.json`](contracts/kit.schema.json) | What a PolyKit brief must contain |
-| [`max/`](max/) | 2027 bootstrap (units, grid, layers, menu) |
-| [`.cursor/skills/`](.cursor/skills/) | Worldbuilding, AD, visual-kickoff, kit-plan, Max, UV, QA |
-
-## Local Max
-
-Cloud cannot run 3ds Max. On your box, in **2027**:
-
-1. Run `max/polycraft_bootstrap.ms`
-2. Read `kits/middlehelm-wetlands-ruins/BRIEF.md`
-3. First assembly test is in that brief — do not detail before it walks at 1.7 m
+| [`kits/`](kits/) | Every PolyKit — brief, jobs, kit Max scripts, status |
+| [`src/polycraft/`](src/polycraft/) | Python API, CLI, MCP |
+| [`contracts/`](contracts/) | Kit brief + harness protocol |
+| [`max/`](max/) | Studio bootstrap + in-Max listener |
+| [`.cursor/skills/`](.cursor/skills/) | World, AD, kit-plan, harness, Max, UV, QA |
 
 ```bash
-python scripts/validate_brief.py
+python -m polycraft validate
 ```
 
 ## Not this slice

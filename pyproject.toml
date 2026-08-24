@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "polycraft"
+version = "0.1.0"
+description = "Agentic kit studio for 3ds Max 2027 — API, CLI, MCP, harness"
+requires-python = ">=3.11"
+readme = "README.md"
+
+[project.scripts]
+polycraft = "polycraft.cli:main"
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.setuptools.packages.find]
+where = ["src"]
