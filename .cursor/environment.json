@@ -1,0 +1,4 @@
+{
+  "name": "PolyCraft",
+  "install": "pip install -e ."
+}
