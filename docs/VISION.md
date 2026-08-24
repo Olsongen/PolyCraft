@@ -27,7 +27,7 @@ This is a working agreement. **Locked** = you said it. **Proposed** = my read.
 - Planning is **worldbuilding + art direction + env art + modeling**, big to small. Not surface-level kit templates.
 - PolyMesh is an ML **product** (decimation, UV understanding). Not our UV department.
 - PolyCraft **solves UVs to artist grade** because we are agentic.
-- Image gen is a **normal studio step**: FPS concepts to answer ambiguity, and 2D trim/tile **kickoffs** for PolyMat. PolyMat still owns tiling solve and the PBR set.
+- Image gen (GPT Image 2.0) is a **normal studio step for concepts** — FPS stills to answer ambiguity. Texture/trim gen is not trusted yet; PolyMat owns tiling solve and PBR.
 - New Max **tools and plugins are allowed** when they unblock craft. We do not invent tools because they sound cool.
 
 **Thesis**

@@ -1,12 +1,14 @@
 # PolyMat kickoffs
 
-Albedo / layout **starts** from Cursor image gen. **PolyMat** does the real tiling solve and the rest of the PBR set (normal, height, roughness, AO). Do not ship these as final materials.
+**Status:** texture gen from this image tool is **not** the path for now. Concepts were strong; stone albedo was okay; trim / wet / moss were rough.
 
-| File | Intent | Verdict |
-|---|---|---|
-| `mhwr_trimsheet_kickoff.png` | 2D trim atlas (courses, moldings, rubble, moss) | **Usable kickoff.** Not a packed studio sheet. |
-| `mhwr_tile_ashlar_dry.png` | 4-edge tile dry ashlar | **Best tile candidate.** Verify wrap in PolyMat. |
-| `mhwr_tile_ashlar_wet.png` | Uniform wet tile | **Failed as a tile** — vertical waterline gradient. Use as trim/unique, or re-prompt: no gradient, four-edge wrap. |
-| `mhwr_tile_moss_overlay.png` | Sparse ID 6 overlay | **Partial.** Drifted toward mossy paving. Re-prompt if we need overlay-only. |
+Studio default: **GPT Image 2.0** for FPS concepts. PolyMat owns tiling solve and PBR.
 
-See `.cursor/skills/visual-kickoff/SKILL.md`.
+Keep `mhwr_tile_ashlar_dry.png` only as a maybe-kickoff if you want to try it in PolyMat. Treat the other three as tests, not inventory.
+
+| File | Verdict |
+|---|---|
+| `mhwr_tile_ashlar_dry.png` | Okay stone. Optional PolyMat kickoff. |
+| `mhwr_trimsheet_kickoff.png` | Rough. Do not use as a sheet. |
+| `mhwr_tile_ashlar_wet.png` | Rough / gradient, not a tile. |
+| `mhwr_tile_moss_overlay.png` | Rough. |

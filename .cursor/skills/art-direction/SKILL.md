@@ -18,7 +18,7 @@ Decide how the place **looks and reads**, not how many walls it has.
 3. **Wear with causality** (this kit: shared waterline 1.0 m, standing water 0.35 m).
 4. **Modular without stamp** (this kit: 4 m bay + 8 m wide bay + overlays + collapse that still sockets).
 5. **References:** what to steal as grammar, what not to photocopy.
-6. **Image gen** — run the `visual-kickoff` skill. FPS stills until the camera is obvious. Kill frames that fight this brief.
+6. **Image gen (GPT Image 2.0)** — `visual-kickoff` skill. FPS stills until the camera is obvious. Do not generate trim/tile sets as production. Kill frames that fight this brief.
 
 ## Fail
 
