@@ -1,0 +1,15 @@
+---
+description: Do not build product until the shared vision is locked.
+alwaysApply: true
+---
+
+# Vision lock
+
+This repository is in **vision lock**. Read `docs/VISION.md` before any work.
+
+- Treat **Locked** lines as law.
+- Treat **Proposed** and **Open** lines as unsigned. Do not invent a product around them.
+- Do not scaffold a web app, MCP server, marketplace, or mesh generator unless `docs/VISION.md` says that is the current slice.
+- Host DCC is **3ds Max 2027 only** (R29, `maxVersion` 29000). pymxs + PySide6. No MaxPlus. No back-compat for older Max.
+- If the user is still discussing identity, ecosystem, or slice 1, the only valid edits are `docs/VISION.md`, this rule, and related skills. Not application code.
+- Coming to a shared vision with questions answered is the work. Skipping it to “make something demoable” is a failure.
