@@ -1,21 +1,20 @@
-# PolyMax (name proposed, not locked)
+# PolyCraft (working name)
 
-3ds Max **2027** agent craft for artist-grade modular 3D kits.
+Agentic 3ds Max **2027** craft for artist-grade modular kits. v1 is **Ethan + agents in this repo**. Other users only after the tooling is proven.
 
-This repo is adjacent to [3D Polygen](https://www.3dpolygen.com), PolyMesh, and PolyMat. It is not a second generative website. It is the DCC-side intelligence: how an agent plans, models, organizes, UVs, and QA's a kit the way a senior environment artist would.
+A **PolyKit** is what this system produces. [PolyMesh](https://www.3dpolygen.com) is a separate **ML product** (SOTA decimation, artist-grade UV) — not agentic, not forked here. Polygen owns concept / kit-sheets / PolyMat.
 
-**Status:** vision lock. We do not model, script a pipeline, or scaffold a product until the agreement in [`docs/VISION.md`](docs/VISION.md) is signed.
+**Status:** vision lock. See [`docs/VISION.md`](docs/VISION.md). Do not model or scaffold a product until that agreement is signed.
 
 ## Host
 
 - Autodesk 3ds Max **2027** (R29, `maxVersion` `29000`)
 - Python via **pymxs** (not MaxPlus)
 - UI via **PySide6** + `qtmax`
-- MAXScript where pymxs cannot carry by-ref / Unwrap / menu registration
 
 ## How we work here
 
 1. Read `docs/VISION.md`.
-2. Anything unmarked as **Locked** is still a proposal.
-3. Do not invent product surface (web app, marketplace, etc.) until the vision says that is the work.
-4. Agent rules live in `.cursor/rules`. Skills live in `.cursor/skills`.
+2. **Locked** is law. **Proposed** / **Open** are unsigned.
+3. No web app, no Grok Bot farm, no UV-ML clone, unless the vision says so.
+4. Rules: `.cursor/rules`. Skills: `.cursor/skills`.

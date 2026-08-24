@@ -1,6 +1,8 @@
-# PolyMax — proposed shared vision
+# PolyCraft — working shared vision
 
-This is a working agreement, not a pitch deck. Items are **Locked** (said by you) or **Proposed** (my read, waiting on you). Nothing in this repo should execute past planning until the Proposed lines are accepted, rewritten, or killed.
+Working name: **PolyCraft**. Alternate you floated: PolyKit. PolyMax is demoted (too host-specific once other people use the tooling).
+
+This is a working agreement, not a pitch deck. **Locked** = you said it. **Proposed** = my read. **Open** = still blocking. Agents may only revise this agreement until the remaining sign-off boxes are checked.
 
 ---
 
@@ -8,50 +10,52 @@ This is a working agreement, not a pitch deck. Items are **Locked** (said by you
 
 **Locked**
 
-- Super-smart AI agent tooling **around 3ds Max 2027**.
-- The job is **artist-grade 3D kits**, not “a mesh from a prompt.”
-- The skill bar is professional: grid, snapping, modularity that is **not stale**, modifier literacy, instancing, references, organization, custom scripts, studio UV solving, kit-level planning, Material IDs.
-- QA has to be real: usability, art direction, taste, nuance — Diablo 4 / Blizzard environment-art equivalent, not stock-kit tidy.
-- At minimum the agent is a serious partner on **solid base meshes for kits**.
+- Super-smart **agentic** tooling around **3ds Max 2027**, for **artist-grade 3D kits**.
+- v1 users: **you and the agents in this repo**. Other people come after the tooling is proven, not before.
+- Professional craft: grid, snapping, modularity that is **not stale**, modifiers, instancing, references, organization, custom scripts, kit-level planning, Material IDs.
+- QA has to be real: usability, art direction, taste, nuance — Diablo 4 / Blizzard environment-art equivalent.
+- At minimum a serious partner on **solid base meshes for kits**.
 - This repo needs **rules and skills** for how we plan and execute, including a shared vision with questions actually answered.
-- Adjacent to the 3D Polygen ecosystem (Polygen, PolyMesh, PolyMat, Kingdom Crafter), not a rewrite of it.
+- Adjacent to Polygen / PolyMesh / PolyMat / Kingdom Crafter, not a rewrite of them.
+- **PolyMesh is not agentic.** It is a product: SOTA decimation + artist-grade UV understanding. We do not fork that work. We call it.
+- We can do more than pure ML *because* this is an agent system: planning, Max craft, kit logic, taste, iteration, organization.
 
-**Proposed**
+**Proposed thesis**
 
-PolyMax is the **Max craft operating system** in that ecosystem.
+**PolyCraft** is the agentic craft OS. A **PolyKit** is what it produces (a production modular kit + its brief/contract). Kingdom Crafter is where a proven kit can ship. Polygen is where concept / style / kit-sheets / PolyMat live.
 
-| Layer | Owns |
-|---|---|
-| **Polygen** | Intent, style, concept, kit *sheets*, extract/refine, generation spend |
-| **PolyMat** | 4K PBR tileables, trims, atlases |
-| **PolyMesh** | Mesh/topology language (exact charter TBD — private repo not readable from this session) |
-| **PolyMax (this)** | 3ds Max 2027 craft: how a kit is *built* as a production system |
-| **Kingdom Crafter** | The shipped-kit taste destination: premium, Unreal-ready, hand-authored fidelity |
+| Layer | Kind | Owns |
+|---|---|---|
+| **Polygen** | Product + agents | Intent, style, concept, kit *sheets*, extract/refine, generation |
+| **PolyMat** | Product | 4K PBR tileables, trims, atlases |
+| **PolyMesh** | Product (ML) | SOTA decimation, artist-grade UV *understanding / solve* |
+| **PolyCraft (this)** | Agentic system | Max 2027 craft: kit as a production system — plan, model, organize, script, QA, taste |
+| **PolyKit** | Output | The kit itself: modules, sockets, IDs, UVs, assembly proof |
+| **Kingdom Crafter** | Destination | Premium Unreal-ready kits with hand-authored fidelity |
 
-Polygen already has the right *order* for generation (bind style → read contracts → elevate → generate). PolyMax needs the equivalent order for **modeling**: lock vision → plan the kit as a system → blockout on grid → craft with modifiers/instances/XRefs → UV/MatID as kit decisions → Visual QA that can fail taste.
+Polygen already has the right *order* for generation (bind style → contracts → elevate → generate). PolyCraft needs the equivalent order for **modeling**: lock vision → plan the kit as a system → blockout on grid → craft with modifiers/instances/XRefs → UV/MatID as kit decisions (solve via Max + PolyMesh, never a competing UV network) → Visual QA that can fail taste.
 
-This is not Hunyuan-in-Max. Generated topology can be a *reference* or a *kickoff*. It is never the kit.
+Generated topology can be a *reference* or a *kickoff*. It is never the kit.
 
 ---
 
 ## 2. What this is not
 
-**Proposed — kill anything that smells like these**
+**Locked in spirit, proposed in wording**
 
 - A second Polygen web workspace.
 - A generic “AI 3D” dashboard.
 - A chatbot that dumps MAXScript cubes.
-- Auto-retopo as the product.
+- Auto-retopo or UV-ML as the product (that is PolyMesh).
 - A stale modular pack: 4 walls, 1 floor, obvious tiling, no wear logic, no hero exceptions.
 - Supporting Max 2024/2025/2026. Host is **2027 only**.
-
-The earlier Next.js scaffold in this session was exactly the wrong instinct (empty-repo default: “browser UI → Next app”). That is **not** the product unless we later decide a briefing room needs a UI.
+- A public multi-user product in slice 1.
 
 ---
 
 ## 3. The actual problem
 
-AI 3D today can make an object. It cannot make a **kit**.
+AI 3D today can make an object. ML can decimate and unwrap. Neither makes a **kit**.
 
 A kit a Blizzard environment artist would trust has:
 
@@ -59,30 +63,30 @@ A kit a Blizzard environment artist would trust has:
 - A socket language (straight, inner/outer corner, cap, column, floor-to-wall, trim).
 - Pivots that are a contract, not a vibe.
 - Instancing and XRefs so a trim change propagates.
-- Material IDs planned *before* the hero mesh, because shaders and trim sheets are kit-level.
-- UVs solved as a *sheet strategy*, not per-asset unwrap-and-pray.
-- Variation designed in: ruin, wear, asymmetry **inside** the module, so it does not read as tile.
-- Silhouette and massing that hold at gameplay camera (D4 isometric-ish or whatever the brief locks).
-- Custom Max scripts as first-class studio tools, not leftovers.
+- Material IDs planned *before* the hero mesh.
+- UVs as a *sheet strategy* here, solved by Max craft + PolyMesh — not island soup, not a second UV product.
+- Variation designed in: ruin, wear, asymmetry **inside** the module.
+- Silhouette and massing that hold at the gameplay camera the brief names.
+- Custom Max scripts as first-class studio tools.
 
-Diablo 4 kits are the named bar because they are modular **and alive**. That is harder than either pure unique hero or pure kitbash.
+Diablo 4 kits are the named bar because they are modular **and alive**.
 
 ---
 
 ## 4. How we execute (the law)
 
-**Proposed operating sequence. Agents in this repo must not skip steps.**
+**Proposed operating sequence. Do not skip.**
 
-1. **Vision lock** — questions below answered in writing. No geometry.
-2. **Kit plan** — module list, grid, sockets, naming, MatIDs, UV strategy, instance/XRef map, LOD/collision intent.
+1. **Vision lock** — this file, then a per-kit brief. No geometry.
+2. **Kit plan** — module list, grid, sockets, naming, MatIDs, UV *strategy*, instance/XRef map, LOD/collision intent.
 3. **Scene bootstrap (Max 2027)** — units, grid, snaps, layers, naming, script menu.
-4. **Blockout** — boxes/splines on grid. Socket proofs. Assembly test of 3–5 modules before any detailing.
-5. **Craft** — modifier-first, instance-first, reference-first. Smart Bevel after Booleans. Array / Data Channel / Field Helper / Noise Plus used on purpose, not as decoration.
-6. **UV + IDs** — execute the kit-level sheet plan. No island soup.
+4. **Blockout** — boxes/splines on grid. Socket proofs. Assemble 3–5 modules before detailing.
+5. **Craft** — modifier-first, instance-first, reference-first. Smart Bevel after Booleans. Array / Data Channel / Field Helper / Noise Plus on purpose.
+6. **UV + IDs** — execute the kit sheet plan in Max; hand meshes to **PolyMesh** for decimation / artist UV solve when that is the right tool; do not reimplement PolyMesh.
 7. **Visual QA** — technical gates *and* taste grading. Fail closed.
-8. **Handoff** — UE/USD/FBX as the brief specified. Polygen/PolyMat only if the brief says the kit re-enters that pipeline.
+8. **Handoff** — UE/USD/FBX as the brief specified.
 
-If step 1 is incomplete, the only valid work is more questions, more reference, or rewriting this document.
+If step 1 is incomplete, the only valid work is more agreement.
 
 ---
 
@@ -96,129 +100,130 @@ If step 1 is incomplete, the only valid work is more questions, more reference, 
 |---|---|
 | Release | R29. Gate scripts with `(maxVersion())[1] >= 29000`. |
 | Python | `pymxs.runtime` only. MaxPlus is dead. |
-| UI | PySide6 + `qtmax`. Python actions in the Max menu are valid in 2027+. |
-| C++ / .NET | Only if pymxs cannot do the job. SDK is .NET 10, C++20, Qt 6.8.3. |
-| Booleans | Boolean modifier + **Smart Bevel** for post-boolean transitions. Do not hand-chamfer spaghetti if Smart Bevel will hold. |
-| Repetition | **Array** (including 2027 surface / Z-growth / spline pack) before copy-paste. |
-| Wear / selection | **Field Helper** + Volume Select, Data Channel, vertex color — planned, not painted as an afterthought. |
-| Noise | **Noise Plus** for controlled, tileable, seedable variation. Tiny amplitude. If you can see the noise before you see the architecture, it failed. |
+| UI | PySide6 + `qtmax`. Python menu actions are valid in 2027+. |
+| C++ / .NET | Only if pymxs cannot. SDK: .NET 10, C++20, Qt 6.8.3. |
+| Booleans | Boolean modifier + **Smart Bevel**. |
+| Repetition | **Array** (2027 surface / Z-growth / spline pack) before copy-paste. |
+| Wear / selection | **Field Helper** + Volume Select, Data Channel, vertex color. |
+| Noise | **Noise Plus**, tiny amplitude, seedable. If you see noise before architecture, it failed. |
 | References | `objXRefMgr` for source modules. Instances in the assembly scene. |
-| Interchange | USD for 3ds Max 0.14.0 is the modern path; FBX only when a downstream tool still demands it. |
-| Units | Propose **1 generic unit = 1 cm** (Unreal). Must be locked per kit. |
+| Interchange | USD 0.14.0 preferred; FBX when downstream still demands it. |
+| Units | Propose **1 generic unit = 1 cm** (Unreal). Lock per kit. |
 
-Modifier literacy means: keep the stack alive until the kit plan says collapse. Collapse is a decision, not a habit.
+Keep the modifier stack alive until the kit plan says collapse. Collapse is a decision.
 
 ---
 
 ## 6. Taste bar (proposed)
 
-Grade against this, not against “looks 3D.”
+- **Read at camera.** Grade the camera the brief named.
+- **Massing first.** Ornament rides on structure.
+- **Wear has a story.** Random cavity noise is not weathering.
+- **Modules hide the module.** Grid is for the LD, not the player.
+- **Restraint + drama.** One strong material story per kit family.
+- **Concept fidelity.** Answer the sheet, do not generic-dungeon it.
+- **Usability.** An LD can assemble a room without fighting pivots.
 
-- **Read at camera.** D4-like kits fail in the ortho beauty shot and pass in the game camera, or the reverse. We grade the camera the brief named.
-- **Massing first.** Chunky, readable silhouettes. Ornament rides on structure; it does not replace it.
-- **Wear has a story.** Water path, hand-height grime, load-bearing chips, liturgical vs neglected. Random cavity noise is not weathering.
-- **Modules hide the module.** Corners, trims, overlays, breakage, and hero inserts exist so the grid is felt by the LD and not seen by the player.
-- **Restraint + drama.** Blizzard env art is not maximalist clutter and not IKEA clean. One strong material story per kit family.
-- **Concept fidelity.** If we were given a kit sheet / concept from Polygen, the model must be a sculptural answer to that sheet, not a generic dungeon pack.
-- **Usability.** An LD can assemble a room in minutes without fighting pivots, scale, or 45-degree traps.
-
-Taste scoring is pass/fail per gate plus a written note. “Pretty good” is not a grade.
+Pass/fail per gate plus a written note. “Pretty good” is not a grade.
 
 ---
 
 ## 7. Visual QA (proposed)
 
-Two tracks. Both can fail the kit.
+**Technical (Max / exported JSON)** — units, grid, naming, pivots, on-grid dimensions, mating sockets, density, MatIDs, UV policy, instance/XRef vs illegal copies, collision/LOD if asked.
 
-**Technical (automatable from Max / exported JSON)**
+**Taste (needs images)** — ortho shaded/wire/checker, game-camera assembled vignette, wear/trim/hero closeups, side-by-side vs concept, three-module stale test.
 
-- Units, grid, snap
-- Naming + layer contract
-- Pivot at socket origin
-- Module dimensions on grid (no 199.7 cm walls)
-- No open sockets that cannot mate
-- Quad-majority on deforming / bevelled areas; ngons only where the plan allows
-- Density in budget
-- MatID coverage matches the plan
-- UV: overlap policy, texel density, trim vs unique, no 0-area islands
-- Instance/XRef usage vs illegal copies
-- Collision / LOD presence if the brief asked
-
-**Taste / art direction (visual, needs images)**
-
-- Ortho: top / front / side, shaded + wire + checker
-- Game-camera stills of an assembled vignette (not an isolated wall)
-- Wear/trim/hero closeups
-- Side-by-side vs concept / kit sheet
-- “Stale test”: three-module repeat — if it screams tile, fail
-
-This cloud environment **cannot run 3ds Max**. QA here is rubric + contracts + review of images you (or a local Max agent) provide. Local Max is where scripts execute.
+This cloud environment cannot run Max. Scripts run locally. We review contracts + images.
 
 ---
 
-## 8. Questions that must be answered
+## 8. Roles, Cursor agents, and Grok Bots
 
-Answer these in this file (or a kit brief that inherits this file). Empty answers mean we are still in vision lock.
+**Proposed: do not stand up a parallel Grok Bot org chart.**
+
+We already have the right primitive in this repo: **rules + skills + Task subagents**, optionally run on Grok (Pro+). A Grok Bot on grok.com would be a second brain with none of the kit contract, git history, or Max scripts. That is a split we do not want in v1.
+
+Use named roles **inside Cursor**, as skills, when we are executing — not during vision lock:
+
+| Role | Job | When |
+|---|---|---|
+| Kit planner | System: grid, sockets, IDs, module list | After vision lock |
+| Max TD | pymxs / modifiers / XRef / naming | Bootstrap + craft |
+| Art director | Taste, silhouette, wear story, stale test | Visual QA |
+| UV lead | Kit UV *strategy*; decide when to call PolyMesh | After blockout |
+| QA | Technical gates, fail closed | Every handoff |
+
+Pro+ is relevant later: put a stronger Grok on **art director / taste** (nuance), a faster Grok on **mechanical QA** (grid, names, pivots). Same contracts, different temperature of judgment. Not a reason to build a bot platform.
+
+Revisit public Grok Bots only when other users exist and we want a published PolyCraft persona. That is not slice 1.
+
+---
+
+## 9. Questions
 
 ### Identity
 
 | # | Question | Status | Working answer |
 |---|---|---|---|
-| I1 | Product / repo name? | Proposed | **PolyMax** |
-| I2 | Who is the user of v1? | Proposed | You + agents in this repo. Not a public Polygen feature yet. |
-| I3 | Success for slice 1? | Proposed | A locked constitution + Max 2027 bootstrap + one kit brief that could actually be modeled. Not a finished cathedral. |
+| I1 | Name? | Proposed | **PolyCraft** (system). **PolyKit** = a kit we produce. PolyMax dropped. |
+| I2 | v1 user? | **Locked** | You + agents here. Other users only after the tooling is proven. |
+| I3 | Slice 1 success? | Proposed | Frozen constitution + Max 2027 bootstrap + one named kit brief. No finished cathedral. No website. |
 
 ### Ecosystem
 
 | # | Question | Status | Working answer |
 |---|---|---|---|
-| E1 | How does PolyMax talk to Polygen? | Open | Consume style/kit-sheet as input; do not reimplement generate. |
-| E2 | What is PolyMesh vs this? | Open | Need your charter. If PolyMesh is topology, PolyMax calls it; it does not fork it. |
-| E3 | What is PolyMat vs this? | Proposed | PolyMat authors sheets; PolyMax assigns IDs and UV layout to *use* those sheets. |
-| E4 | Kingdom Crafter relationship? | Proposed | Taste + first real kit destination. |
+| E1 | Polygen? | Proposed | Consume style / kit-sheet as input. Do not reimplement generate. |
+| E2 | PolyMesh? | **Locked** | ML product: SOTA decimation + artist-grade UV. Not agentic. We call it; we do not fork it. |
+| E3 | PolyMat? | Proposed | Authors sheets. We assign IDs and layout to *use* them. |
+| E4 | Kingdom Crafter? | Proposed | Taste bar + destination for a proven kit. |
+| E5 | Agentic vs ML? | **Locked** | Agents here do planning, Max craft, kit logic, taste, iteration. ML products stay products. |
 
-### Craft defaults (per-kit can override, studio needs a default)
+### Craft defaults
 
 | # | Question | Status | Working answer |
 |---|---|---|---|
-| C1 | Engine target? | Proposed | Unreal 5 |
+| C1 | Engine? | Proposed | Unreal 5 |
 | C2 | Units? | Proposed | 1 Max unit = 1 cm |
-| C3 | Default module? | Open | 200 / 400 cm walls are a common D4-ish start — confirm |
-| C4 | Camera for QA? | Open | Third-person / D4-like vs FPS changes every silhouette decision |
-| C5 | Collision / Nanite / LOD policy? | Open | |
-| C6 | First proving-ground kit? | Open | Recommend one Kingdom Crafter / Sanctuary-adjacent interior kit, not a platform of kits |
-| C7 | How does the agent drive Max? | Proposed | Local pymxs + MAXScript, driven by a JSON kit contract in this repo. No pretend-Max in the cloud. |
+| C3 | Default module? | Open | 200 / 400 cm walls — confirm |
+| C4 | QA camera? | Open | D4-like vs FPS changes every silhouette decision |
+| C5 | Collision / Nanite / LOD? | Open | |
+| C6 | First proving-ground kit? | Open | One Kingdom Crafter / Sanctuary-adjacent interior, not a platform |
+| C7 | Drive Max how? | Proposed | Local pymxs + MAXScript from a JSON kit contract in git. No pretend-Max in the cloud. |
 
 ### Product surface
 
 | # | Question | Status | Working answer |
 |---|---|---|---|
-| P1 | Is there a web app in v1? | Proposed | **No.** Docs, JSON contracts, Max scripts, Cursor rules/skills. |
-| P2 | MCP server in v1? | Proposed | Not until the craft contracts exist. Polygen already has MCP. |
+| P1 | Web app in v1? | Proposed | **No.** |
+| P2 | MCP in v1? | Proposed | No. Polygen already has MCP. |
 | P3 | Custom Max scripts in v1? | Proposed | Yes: bootstrap, naming, grid, socket/pivot checks, QA export. |
+| P4 | Grok Bots as roles? | Proposed | **No separate bots.** Roles = skills + subagents here. Grok models used when useful. |
 
 ---
 
-## 9. Slice 1, if you sign this
+## 10. Slice 1, if you sign the rest
 
-If you accept the Proposed column (or rewrite it), the next work is:
+1. Freeze this document.
+2. Skills: kit-plan, max-2027-craft, studio-UV-strategy, visual-QA, taste. UV *solve* remains PolyMesh.
+3. `kit.schema.json` — contract a PolyKit brief must satisfy.
+4. Max 2027 bootstrap pack.
+5. One named kit brief — still no hero detailing.
 
-1. Freeze this document (mark Proposed → Locked).
-2. Agent skills: vision-lock, kit-plan, max-2027-craft, studio-UV, visual-QA, taste.
-3. `kit.schema.json` — the contract a brief must satisfy.
-4. Max 2027 bootstrap pack (menu + pymxs): units/grid/snap/layers/naming.
-5. One named kit brief filled in as the proving ground — still no hero detailing.
-
-No mesh generation. No second website. No “platform.”
+No mesh generator. No second website. No bot platform. No PolyMesh clone.
 
 ---
 
-## 10. Sign-off
+## 11. Sign-off
 
-- [ ] Name locked
-- [ ] Ecosystem boundaries locked (Polygen / PolyMesh / PolyMat / this)
+- [ ] Name locked (PolyCraft vs PolyKit-as-the-repo)
+- [x] v1 audience locked (us first, others after proof)
+- [x] PolyMesh boundary locked (ML decimation + UV product, not agentic)
+- [x] Agentic vs ML locked
+- [ ] Ecosystem remainder (Polygen / PolyMat / Kingdom Crafter) locked
 - [ ] Craft defaults locked (units, engine, camera)
 - [ ] Slice 1 scope locked
 - [ ] First proving-ground kit named
 
-Until these boxes are checked, agents may only revise this agreement.
+Until the empty boxes are checked, agents may only revise this agreement.
