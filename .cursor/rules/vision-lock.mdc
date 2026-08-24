@@ -11,7 +11,8 @@ Read `docs/VISION.md` and the active kit under `kits/` before modeling or script
 - Host: **3ds Max 2027 only** (R29, `maxVersion` `29000`). pymxs + PySide6. No MaxPlus.
 - Units: **display meters** (`1.0` = 1 m), **system centimeters**. Viewport talk is meters. Unreal receives cm.
 - Grid: **0.5 / 1 / 2 / 4 / 8 m**. Prefer on-grid. Exceptions must still socket to the grid.
-- Order: worldbuilding + art direction → kit plan → Max. No module list without a place.
+- Order: worldbuilding + art direction → **image gen to kill ambiguity** → kit plan → Max. No module list without a place.
+- Image gen is a **normal workflow step** (FPS concepts, trim/tile kickoffs for PolyMat). It does not replace PolyMat’s tiling solve or PBR maps.
 - First kit: **Middlehelm wetlands ruins**, first-person, primary ref **Abbaye de Trois-Fontaines** (Marne).
 - Agentic artist-grade UV is in scope. PolyMesh is an ML sibling, not the UV department.
 - Plugins (UV, chamfer profiles, Field Tracing Displacement) only when a kit step is blocked.

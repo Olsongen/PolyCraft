@@ -18,6 +18,7 @@ Decide how the place **looks and reads**, not how many walls it has.
 3. **Wear with causality** (this kit: shared waterline 1.0 m, standing water 0.35 m).
 4. **Modular without stamp** (this kit: 4 m bay + 8 m wide bay + overlays + collapse that still sockets).
 5. **References:** what to steal as grammar, what not to photocopy.
+6. **Image gen** — run the `visual-kickoff` skill. FPS stills until the camera is obvious. Kill frames that fight this brief.
 
 ## Fail
 
@@ -28,4 +29,4 @@ Decide how the place **looks and reads**, not how many walls it has.
 
 ## Output
 
-Fill `artDirection`, `references`, `flood`, and taste items in `qa`. Then hand to kit-plan.
+Fill `artDirection`, `references`, `flood`, and taste items in `qa`. Generate concepts into `concepts/`. Then hand to kit-plan.

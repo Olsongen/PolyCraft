@@ -27,6 +27,7 @@ This is a working agreement. **Locked** = you said it. **Proposed** = my read.
 - Planning is **worldbuilding + art direction + env art + modeling**, big to small. Not surface-level kit templates.
 - PolyMesh is an ML **product** (decimation, UV understanding). Not our UV department.
 - PolyCraft **solves UVs to artist grade** because we are agentic.
+- Image gen is a **normal studio step**: FPS concepts to answer ambiguity, and 2D trim/tile **kickoffs** for PolyMat. PolyMat still owns tiling solve and the PBR set.
 - New Max **tools and plugins are allowed** when they unblock craft. We do not invent tools because they sound cool.
 
 **Thesis**
@@ -208,7 +209,7 @@ These are hats in the thought process even when one agent wears several. The AD 
 | E2 | PolyMesh? | **Locked** | ML sibling. Not our UV department. |
 | E3 | UVs? | **Locked** | Agentic artist-grade solve here. |
 | E4 | Plugins? | **Locked** | As needed. Field Tracing Displacement is cataloged, not pre-built. |
-| E5 | PolyMat? | Proposed | Sheets we plan IDs/UVs to use; displacement maps may later feed Field Tracing. |
+| E5 | PolyMat? | **Locked** | Owns tiling solve + PBR maps. We feed albedo/trim **kickoffs** from image gen. |
 
 ### Craft
 
