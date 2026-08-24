@@ -1,35 +1,18 @@
 ---
 name: shared-vision
-description: Facilitate vision lock for PolyCraft. Use when discussing kits, engines, UVs, Max plugins, or when docs/VISION.md still has Open or Proposed items.
+description: Facilitate vision lock for PolyCraft. Identity is locked; use when a new kit starts or VISION.md would change.
 ---
 
 # Shared vision
 
-## When to use
-
-Any new kit, any new subsystem, and any session that starts from a high-level idea.
+Identity is locked (`docs/VISION.md`). New kits still start here: world + AD before modules.
 
 ## Sequence
 
-1. Read `docs/VISION.md`.
-2. Separate **Locked** / **Proposed** / **Open**.
-3. Restate the thesis in plain language (what this is, what it is not, where it sits next to Polygen / PolyMesh / PolyMat).
-4. Ask or answer only the questions that actually change execution. Do not pad.
-5. Write the answers back into `docs/VISION.md` (or a kit brief that inherits it).
-6. Do not generate geometry, scripts-as-product, or a UI until sign-off boxes are checked — unless the user explicitly overrides.
+1. Read `docs/VISION.md` and the active brief.
+2. New kit: copy the schema, fill world/AD first, then kit-plan.
+3. Do not invent a website, engine plugin, or Field Tracing tool unless a kit step is blocked.
 
-## Bar
+## Active proving ground
 
-A vision is locked when a senior environment artist could start blockout tomorrow without guessing grid, sockets, camera, material strategy, or taste references.
-
-## Anti-patterns
-
-- Scaffolding Next.js because the repo was empty.
-- Treating Polygen generation as a substitute for Max craft.
-- Jumping to a module list before world and art direction exist.
-- Modeling in centimeters in the Max viewport to “match Unreal.”
-- Building Field Tracing Displacement (or any plugin) because it is a good idea, not because a kit is blocked.
-- Treating PolyMesh as our UV department, or cloning it as an ML product here.
-- Standing up Grok Bots instead of skills + subagents.
-- “Modular kit” that is four walls and a floor.
-- Answering taste with adjectives instead of references, camera, and wear logic.
+Middlehelm wetlands ruins, FPS, grid 0.5–8 m, ref Abbaye de Trois-Fontaines (church ruin only).

@@ -1,20 +1,19 @@
 ---
-description: Do not build product until the shared vision is locked.
+description: PolyCraft constitution. Read VISION and the active kit brief before craft.
 alwaysApply: true
 ---
 
-# Vision lock
+# PolyCraft constitution
 
-This repository is in **vision lock**. Read `docs/VISION.md` before any work.
+Read `docs/VISION.md` and the active kit under `kits/` before modeling or scripting new tools.
 
-- Treat **Locked** lines as law.
-- Treat **Proposed** and **Open** lines as unsigned. Do not invent a product around them.
-- Do not scaffold a web app, MCP server, marketplace, or mesh generator unless `docs/VISION.md` says that is the current slice.
-- Host DCC is **3ds Max 2027 only** (R29, `maxVersion` 29000). pymxs + PySide6. No MaxPlus. No back-compat for older Max.
-- If the user is still discussing identity, ecosystem, or slice 1, the only valid edits are `docs/VISION.md`, this rule, and related skills. Not application code.
-- Coming to a shared vision with questions answered is the work. Skipping it to “make something demoable” is a failure.
-- Name is **PolyCraft**. Kits first; Unreal and Source are destinations.
-- Units: **display meters** (`1.0` = 1 m), **system centimeters**. Do not model in cm in the viewport.
-- Planning is worldbuilding + art direction (Blizzard studio), then kit, then Max. No shallow AD.
-- Agentic artist-grade UV solve is in scope. Plugins (UV, chamfer profiles, Field Tracing Displacement) are as-needed only.
-- Do not stand up Grok Bots as a parallel role system; roles are studio hats in this repo.
+- Identity is locked. Slice 1 is in execution.
+- Host: **3ds Max 2027 only** (R29, `maxVersion` `29000`). pymxs + PySide6. No MaxPlus.
+- Units: **display meters** (`1.0` = 1 m), **system centimeters**. Viewport talk is meters. Unreal receives cm.
+- Grid: **0.5 / 1 / 2 / 4 / 8 m**. Prefer on-grid. Exceptions must still socket to the grid.
+- Order: worldbuilding + art direction → kit plan → Max. No module list without a place.
+- First kit: **Middlehelm wetlands ruins**, first-person, primary ref **Abbaye de Trois-Fontaines** (Marne).
+- Agentic artist-grade UV is in scope. PolyMesh is an ML sibling, not the UV department.
+- Plugins (UV, chamfer profiles, Field Tracing Displacement) only when a kit step is blocked.
+- No website, no Grok Bot org, no Unreal/Source plugin as the next artifact.
+- Do not skip the kit brief to “just make a wall.”

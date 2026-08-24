@@ -1,0 +1,300 @@
+{
+  "id": "middlehelm-wetlands-ruins",
+  "title": "Middlehelm Wetlands Ruins",
+  "status": "planned",
+  "camera": {
+    "rig": "fps",
+    "eyeHeightM": 1.7,
+    "fovDeg": 90,
+    "notes": "First person. Grade at eye height walking the nave and aisle, not from an orbit camera. Waterline, joints, and vault soffits must read at 0.5–2 m. Arcade rhythm and west front read at 12–20 m."
+  },
+  "grid": {
+    "stepsM": [0.5, 1, 2, 4, 8],
+    "preferOnGrid": true,
+    "exceptionRule": "Organic roots, reed, and rubble may miss the grid; their sockets and anchors snap. Structural walls, piers, floors, and vaults stay on 0.5–8 m."
+  },
+  "units": {
+    "display": "meters",
+    "system": "centimeters",
+    "unreal": "1cm=1uu",
+    "sourceNote": "Scale adapter later. Do not model a second kit in inches."
+  },
+  "world": {
+    "place": "A drowned austere abbey in the Middlehelm lowlands, founded at three springs in wet forest. Pale stone on a Bernardine plan, now occupied by standing water, reed, and temperate trees.",
+    "whoLived": "A reforming order, Cistercian in all but name. They drained the basin to keep a dry church in a wet country. Architecture as devotion: proportion, light, almost no grotesque.",
+    "whatHappened": "The drains lost. Springs and peat reclaimed the nave. Roofs wicked out. Vaults failed as bays, some still on corbels, some lying among trees. Not a siege ruin.",
+    "playerPath": "FPS entry at the west front or a wounded aisle, through unvaulted then vaulted bays, under the arcade, along a wet 2 m aisle, to a pooled crossing. Eye 1.7 m.",
+    "scaleOfSpace": "Walkable nave. Standard bay 4 m, wide bay 8 m, aisle 2 m, pier 1 m, trim 0.5 m. Full 70 m church is a later layout target, not the first assembly.",
+    "landmarks": [
+      "West front: three round-arched lights and a rose remnant",
+      "Standing vaulted bay beside an open bay",
+      "Tree socketed in the nave paving",
+      "Shared waterline and standing water in the low nave"
+    ],
+    "wrongForThisPlace": [
+      "Generic mossy dungeon or crypt",
+      "Flamboyant Gothic, gargoyles, gold liturgical trim",
+      "18th-century classical gate from the real Trois-Fontaines courtyard",
+      "Tropical jungle or mangrove as the default overgrowth",
+      "Identical stamped 4 m walls with no wide bay and no shared waterline"
+    ]
+  },
+  "artDirection": {
+    "silhouette": "Heavy, calm, sacred verticals. Pointed arcade at distance; round west triplet as softness. Ruin reads as missing vault plus standing arcade, with trees breaking the skyline inside the plan.",
+    "materialStory": "One stone family: pale warm limestone, wet and dry as states of the same ashlar. Timber only as shores and lost-roof ghosts. Vegetation is overlay. Metal almost absent.",
+    "wear": "Standing water ~0.35 m, stain at 1.0 m on every wall. Algae on the first courses. Vault soffits cleaner than open wall-heads. Fallen bays land as readable slabs, not noise. Hand-wear only on a surviving west-to-crossing path.",
+    "modularityWithoutStamp": "4 m bay plus 8 m wide bay from Trois-Fontaines nave irregularity. Collapse pieces still socket. Ivy/root/reed/tree overlays. Waterline trim continuous. Plan stays orthogonal; organic sits in the plan.",
+    "referencesHowToUse": "Steal bay rhythm, arcade vs aisle, round west triplet, corbelled remaining vaults, fallen vaults as objects, trees in the nave, austere capitals, pale stone, drained-basin-returned-to-water.",
+    "referencesHowNotToCopy": "Do not photogrammetry the Marne site or kit the 18th-century abbatial gateway. Grammar, not a postcard of France."
+  },
+  "references": [
+    {
+      "name": "Abbaye de Trois-Fontaines (church ruins)",
+      "url": "https://en.wikipedia.org/wiki/Trois-Fontaines_Abbey",
+      "role": "primary",
+      "notes": "Cistercian church 1160–1190, ~70×40 m, first three bays wider, pointed arcade, pointed barrel aisles, round west triplet, rose remnant, vaults on corbels, collapsed bays among beeches. Founded 1118; monks drained the woodland."
+    },
+    {
+      "name": "Abbaye de Trois-Fontaines — site",
+      "url": "https://www.abbayedetroisfontaines.com/",
+      "role": "primary",
+      "notes": "Standing ruin in park; use church ruin only. Ignore later classical gate as kit language."
+    },
+    {
+      "name": "18th-century abbatial gateway (Trois-Fontaines)",
+      "role": "kill",
+      "notes": "Corinthian pilasters, concave cour d'honneur. Later occupation. Not Middlehelm kit."
+    }
+  ],
+  "naming": {
+    "prefix": "MHWR",
+    "pattern": "MHWR_<family>_<part>_<grid>",
+    "example": "MHWR_wall_arcade_4m",
+    "layers": [
+      "00_REF",
+      "10_BLOCKOUT",
+      "20_ARCH",
+      "30_VAULT",
+      "40_OVERLAY",
+      "50_VEG",
+      "60_ASSEMBLY",
+      "90_QA"
+    ]
+  },
+  "sockets": [
+    { "id": "wall_4", "rule": "4 m wall/arcade mates on grid; pivot at floor, left-hand as +X." },
+    { "id": "wall_8", "rule": "8 m wide bay mates to 4 m or 8 m; same pivot law." },
+    { "id": "pier", "rule": "1 m pier; arcade springs from pier sockets." },
+    { "id": "aisle_2", "rule": "2 m aisle run parallel to nave; floor and wall share the 2 m offset." },
+    { "id": "floor", "rule": "4 m and 2 m floors; flooded vs raised as variants, same pivot." },
+    { "id": "overlay", "rule": "Ivy/root snap to wall face sockets; tree/reed snap to floor sockets." },
+    { "id": "fallen_vault", "rule": "Collapsed bay sits on floor sockets, orthogonal to the plan." }
+  ],
+  "materialIds": [
+    { "id": 1, "name": "ashlar_dry", "use": "Above the 1.0 m stain." },
+    { "id": 2, "name": "ashlar_wet", "use": "Below stain, capillary, splash." },
+    { "id": 3, "name": "core_rubble", "use": "Breaks, wall-heads, fallen fill." },
+    { "id": 4, "name": "vault_soffit", "use": "Standing vault and collapsed slab soffit." },
+    { "id": 5, "name": "timber", "use": "Shores, plates, remnant ties." },
+    { "id": 6, "name": "vegetation", "use": "Overlays." },
+    { "id": 7, "name": "metal", "use": "Rare fittings only." }
+  ],
+  "uvStrategy": {
+    "kitPolicy": "Trim sheet carries ashlar courses, waterline, and arcade profiles for all modular walls. Unique UVs only for west front, surviving vaulted bay, fallen slabs, and nave tree. Stack modular islands. Do not unique-unwrap every 4 m wall.",
+    "trim": "Waterline, course heights, arcade inner profile, pier wrap.",
+    "unique": "West front, hero vault, fallen bay, tree.",
+    "texelNote": "Lock texel across the stone family so wet/dry and trim/unique match at seams.",
+    "uv2": "Only if a Source handoff is named later. Not required for blockout."
+  },
+  "flood": {
+    "standingWaterM": 0.35,
+    "highWaterStainM": 1.0,
+    "notes": "Both land on the 0.5 m grid. Waterline trim is continuous through standing and broken walls. Pivots at dry floor grid, not at water surface."
+  },
+  "modules": [
+    {
+      "id": "MHWR_floor_nave_4m",
+      "family": "floor",
+      "gridM": [4],
+      "role": "Nave paving, flooded variant first.",
+      "priority": "blockout",
+      "instance": true
+    },
+    {
+      "id": "MHWR_floor_aisle_2m",
+      "family": "floor",
+      "gridM": [2, 4],
+      "role": "Aisle paving, wetter, reed-tolerant.",
+      "priority": "blockout",
+      "instance": true
+    },
+    {
+      "id": "MHWR_wall_arcade_4m",
+      "family": "wall",
+      "gridM": [4],
+      "role": "Standard pointed arcade bay.",
+      "priority": "blockout",
+      "instance": true
+    },
+    {
+      "id": "MHWR_wall_arcade_8m",
+      "family": "wall",
+      "gridM": [8],
+      "role": "Wide bay matching Trois-Fontaines first-bays-wider.",
+      "priority": "blockout",
+      "instance": true
+    },
+    {
+      "id": "MHWR_pier_1m",
+      "family": "pier",
+      "gridM": [1],
+      "role": "Compound pier the arcade springs from.",
+      "priority": "blockout",
+      "instance": true
+    },
+    {
+      "id": "MHWR_aisle_wall_2m",
+      "family": "wall",
+      "gridM": [2, 4],
+      "role": "Aisle outer wall, lower, wetter.",
+      "priority": "blockout",
+      "instance": true
+    },
+    {
+      "id": "MHWR_trim_waterline_1m",
+      "family": "trim",
+      "gridM": [0.5, 1, 2, 4],
+      "role": "Shared 1.0 m stain / course break. Kit law.",
+      "priority": "blockout",
+      "instance": true
+    },
+    {
+      "id": "MHWR_vault_stand_4m",
+      "family": "vault",
+      "gridM": [4],
+      "role": "Remaining vault on corbels.",
+      "priority": "craft",
+      "instance": true
+    },
+    {
+      "id": "MHWR_vault_fallen_4m",
+      "family": "vault",
+      "gridM": [4],
+      "role": "Collapsed bay as a readable floor object.",
+      "priority": "craft",
+      "instance": true
+    },
+    {
+      "id": "MHWR_wall_break_4m",
+      "family": "wall",
+      "gridM": [4],
+      "role": "Broken arcade that still mates.",
+      "priority": "craft",
+      "instance": true
+    },
+    {
+      "id": "MHWR_corner_in_4m",
+      "family": "wall",
+      "gridM": [4],
+      "role": "Inner corner.",
+      "priority": "blockout",
+      "instance": true
+    },
+    {
+      "id": "MHWR_corner_out_4m",
+      "family": "wall",
+      "gridM": [4],
+      "role": "Outer corner.",
+      "priority": "blockout",
+      "instance": true
+    },
+    {
+      "id": "MHWR_cap_2m",
+      "family": "wall",
+      "gridM": [2],
+      "role": "Wall end / ruin cap.",
+      "priority": "blockout",
+      "instance": true
+    },
+    {
+      "id": "MHWR_west_front_8m",
+      "family": "hero",
+      "gridM": [8],
+      "role": "West triplet and rose remnant. Unique UVs.",
+      "priority": "hero",
+      "instance": false
+    },
+    {
+      "id": "MHWR_pile_0.5m",
+      "family": "foundation",
+      "gridM": [0.5, 1],
+      "role": "Wetland foundation / later timber pile at wall foot.",
+      "priority": "later",
+      "instance": true
+    },
+    {
+      "id": "MHWR_boardwalk_1m",
+      "family": "prop",
+      "gridM": [1, 2],
+      "role": "Later path over standing water. Do not make it the architecture.",
+      "priority": "later",
+      "instance": true
+    },
+    {
+      "id": "MHWR_overlay_ivy",
+      "family": "overlay",
+      "gridM": [1, 2, 4],
+      "role": "Face overlay to break stamp.",
+      "priority": "overlay",
+      "instance": true
+    },
+    {
+      "id": "MHWR_overlay_tree_nave",
+      "family": "overlay",
+      "gridM": [2, 4],
+      "role": "Beech/alder in nave floor socket.",
+      "priority": "overlay",
+      "instance": false
+    },
+    {
+      "id": "MHWR_overlay_reed",
+      "family": "overlay",
+      "gridM": [0.5, 1, 2],
+      "role": "Aisle and flood margin.",
+      "priority": "overlay",
+      "instance": true
+    }
+  ],
+  "killList": [
+    "Dungeon brick, torch rings, generic crypt",
+    "Gargoyles, flamboyant tracery, gold leaf",
+    "Trois-Fontaines 18th-century Corinthian gateway",
+    "Jungle, palms, mangrove as default biome",
+    "Modeling in centimeters in the Max viewport",
+    "Off-grid walls that almost mate",
+    "Unique unwrap on every modular wall",
+    "Collapse that cannot socket",
+    "Wear without a kit-wide waterline",
+    "Designing for an aerial beauty shot instead of FPS eye height"
+  ],
+  "qa": {
+    "technical": [
+      "Display meters, system centimeters",
+      "Dimensions on 0.5 / 1 / 2 / 4 / 8 m or exception rule documented",
+      "Pivots at floor grid origin per socket law",
+      "MHWR naming and layers",
+      "MatIDs 1–7 match the brief",
+      "Waterline trim at 1.0 m on every wall module",
+      "Instances/XRefs for repeated modules, no illegal copies"
+    ],
+    "taste": [
+      "FPS walkthrough at 1.7 m through the first assembly test",
+      "Reads as drowned austere church, not a dungeon",
+      "Standing vault beside open bay",
+      "Three-module arcade stale test — waterline and overlays must save it",
+      "West front is a landmark, not a tiled wall",
+      "No 18th-century classical language",
+      "Overgrowth is temperate wetland, not jungle"
+    ]
+  }
+}

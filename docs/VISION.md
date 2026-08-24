@@ -2,19 +2,15 @@
 
 **PolyCraft** is the name. A **PolyKit** is what it produces.
 
-This is a working agreement. **Locked** = you said it. **Proposed** = my read. **Open** = still blocking. Until remaining sign-off boxes are checked, agents may only revise this agreement.
+This is a working agreement. **Locked** = you said it. **Proposed** = my read.
 
-### What we still need from you
+### Slice 1 — locked, in execution
 
-Two things. Everything else is frozen or can default.
-
-1. **Yes to slice 1** — freeze this doc and build: skills (world/AD, kit-plan, Max 2027 craft, UV, QA) + `kit.schema.json` + Max bootstrap (display meters / system cm, grid, naming, menu). No website, no engine plugins, no Field Tracing yet, no hero mesh.
-2. **The first proving-ground place**, even short:
-   - **Place** (one real space, not “a dungeon kit”)
-   - **Camera** (D4-like / third-person / FPS / other)
-   - **Module** (2 m, 4 m, or mixed)
-
-If you want us to pick the place, say so. That is enough to leave vision lock.
+- First PolyKit: **Middlehelm wetlands ruins**, first-person.
+- Primary architectural ref: **Abbaye de Trois-Fontaines**, Trois-Fontaines-l'Abbaye, Marne, Champagne-Ardenne.
+- Grid: **0.5 / 1 / 2 / 4 / 8 m**. Prefer on-grid. Organic and breakage may miss; they still socket to the grid.
+- Build: skills, `contracts/kit.schema.json`, kit brief, Max 2027 bootstrap.
+- Still out of scope: website, engine plugins, Field Tracing Displacement, hero mesh production.
 
 ---
 
@@ -202,7 +198,7 @@ These are hats in the thought process even when one agent wears several. The AD 
 |---|---|---|---|
 | I1 | Name? | **Locked** | PolyCraft. PolyKit = the kit. |
 | I2 | v1 user? | **Locked** | You + agents here. |
-| I3 | Slice 1? | Proposed | Constitution + units bootstrap + world/AD skill + kit schema + one named brief (no hero mesh). |
+| I3 | Slice 1? | **Locked** | Skills + kit schema + Max 2027 bootstrap + Middlehelm wetlands brief. No hero mesh. |
 
 ### Ecosystem
 
@@ -220,20 +216,20 @@ These are hats in the thought process even when one agent wears several. The AD 
 |---|---|---|---|
 | C1 | Engines? | **Locked** | Unreal + Source destinations. Kits first. |
 | C2 | Units? | **Locked** | Display meters (`1.0` = 1 m). System cm. UE: 4 m → 400 uu. |
-| C3 | Default module? | Open | Per first kit. 2 m / 4 m is the usual conversation. |
-| C4 | Camera? | Open | Per-kit. World/AD pass names it. |
-| C5 | First kit? | Open | Needs a place and a story, not a generic dungeon. |
+| C3 | Grid? | **Locked** | 0.5 / 1 / 2 / 4 / 8 m. Prefer on-grid; exceptions socket back. |
+| C4 | Camera? | **Locked** | First person. Eye ~1.7 m. |
+| C5 | First kit? | **Locked** | Middlehelm overgrown wetland ruins. Ref: Trois-Fontaines abbey. |
 | C6 | Drive Max? | Proposed | Local pymxs / plugins from git. No pretend-Max in the cloud. |
 
 ---
 
-## 11. Slice 1 (if you sign the rest)
+## 11. Slice 1 — executing
 
-1. Freeze this document.
-2. Skills: worldbuilding, art-direction, kit-plan, max-2027-craft (including units lock), artist-UV, visual-QA.
-3. `kit.schema.json` that **requires** world/AD fields, not just a module table.
-4. Max bootstrap: display meters, system cm, grid/snap, naming, menu.
-5. One proving-ground brief — a real place — still no hero detailing, no Field Tracing plugin yet.
+1. This document — frozen for identity.
+2. Skills: worldbuilding, art-direction, kit-plan, max-2027-craft, artist-UV, visual-QA.
+3. `contracts/kit.schema.json`.
+4. Max 2027 bootstrap: display meters, system cm, 0.5 m home grid, naming, menu.
+5. `kits/middlehelm-wetlands-ruins/` — world/AD brief + machine contract. No hero mesh. No Field Tracing plugin.
 
 ---
 
@@ -245,7 +241,7 @@ These are hats in the thought process even when one agent wears several. The AD 
 - [x] Engines: Unreal + Source, kits first
 - [x] Agentic UV + plugins-as-needed (incl. Field Tracing Displacement, later)
 - [x] Blizzard-level AD / worldbuilding / env team process
-- [ ] Slice 1 scope (proposed above — needs a yes)
-- [ ] First proving-ground kit: place, camera, module size (or “you pick”)
+- [x] Slice 1 scope
+- [x] First kit: Middlehelm wetlands ruins, FPS, grid 0.5–8 m, ref Trois-Fontaines
 
-Until those two are answered, agents may only revise this agreement.
+Vision lock for identity is closed. Execute slice 1 against `kits/middlehelm-wetlands-ruins/`.

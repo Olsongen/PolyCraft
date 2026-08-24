@@ -1,0 +1,224 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://polycraft.local/contracts/kit.schema.json",
+  "title": "PolyKit brief",
+  "description": "A PolyCraft kit is a place first. Module lists without world and art direction are invalid.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "title",
+    "status",
+    "camera",
+    "grid",
+    "units",
+    "world",
+    "artDirection",
+    "references",
+    "naming",
+    "sockets",
+    "materialIds",
+    "uvStrategy",
+    "modules",
+    "killList",
+    "qa"
+  ],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "title": { "type": "string", "minLength": 4 },
+    "status": {
+      "type": "string",
+      "enum": ["vision", "planned", "blockout", "craft", "qa", "handoff"]
+    },
+    "camera": {
+      "type": "object",
+      "required": ["rig", "eyeHeightM", "notes"],
+      "properties": {
+        "rig": { "type": "string", "enum": ["fps", "third-person", "d4-like", "other"] },
+        "eyeHeightM": { "type": "number" },
+        "fovDeg": { "type": "number" },
+        "notes": { "type": "string", "minLength": 40 }
+      }
+    },
+    "grid": {
+      "type": "object",
+      "required": ["stepsM", "preferOnGrid", "exceptionRule"],
+      "properties": {
+        "stepsM": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "number" }
+        },
+        "preferOnGrid": { "type": "boolean" },
+        "exceptionRule": { "type": "string", "minLength": 20 }
+      }
+    },
+    "units": {
+      "type": "object",
+      "required": ["display", "system", "unreal"],
+      "properties": {
+        "display": { "const": "meters" },
+        "system": { "const": "centimeters" },
+        "unreal": { "const": "1cm=1uu" },
+        "sourceNote": { "type": "string" }
+      }
+    },
+    "world": {
+      "type": "object",
+      "required": [
+        "place",
+        "whoLived",
+        "whatHappened",
+        "playerPath",
+        "scaleOfSpace",
+        "landmarks",
+        "wrongForThisPlace"
+      ],
+      "properties": {
+        "place": { "type": "string", "minLength": 40 },
+        "whoLived": { "type": "string", "minLength": 40 },
+        "whatHappened": { "type": "string", "minLength": 40 },
+        "playerPath": { "type": "string", "minLength": 40 },
+        "scaleOfSpace": { "type": "string", "minLength": 20 },
+        "landmarks": {
+          "type": "array",
+          "minItems": 2,
+          "items": { "type": "string" }
+        },
+        "wrongForThisPlace": {
+          "type": "array",
+          "minItems": 3,
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "artDirection": {
+      "type": "object",
+      "required": [
+        "silhouette",
+        "materialStory",
+        "wear",
+        "modularityWithoutStamp",
+        "referencesHowToUse",
+        "referencesHowNotToCopy"
+      ],
+      "properties": {
+        "silhouette": { "type": "string", "minLength": 40 },
+        "materialStory": { "type": "string", "minLength": 40 },
+        "wear": { "type": "string", "minLength": 40 },
+        "modularityWithoutStamp": { "type": "string", "minLength": 40 },
+        "referencesHowToUse": { "type": "string", "minLength": 40 },
+        "referencesHowNotToCopy": { "type": "string", "minLength": 20 }
+      }
+    },
+    "references": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name", "role", "notes"],
+        "properties": {
+          "name": { "type": "string" },
+          "url": { "type": "string" },
+          "role": {
+            "type": "string",
+            "enum": ["primary", "supporting", "kill", "engine"]
+          },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "naming": {
+      "type": "object",
+      "required": ["prefix", "pattern", "example"],
+      "properties": {
+        "prefix": { "type": "string" },
+        "pattern": { "type": "string" },
+        "example": { "type": "string" },
+        "layers": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "sockets": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["id", "rule"],
+        "properties": {
+          "id": { "type": "string" },
+          "rule": { "type": "string" }
+        }
+      }
+    },
+    "materialIds": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "use"],
+        "properties": {
+          "id": { "type": "integer", "minimum": 1 },
+          "name": { "type": "string" },
+          "use": { "type": "string" }
+        }
+      }
+    },
+    "uvStrategy": {
+      "type": "object",
+      "required": ["kitPolicy", "trim", "unique", "texelNote"],
+      "properties": {
+        "kitPolicy": { "type": "string", "minLength": 40 },
+        "trim": { "type": "string" },
+        "unique": { "type": "string" },
+        "texelNote": { "type": "string" },
+        "uv2": { "type": "string" }
+      }
+    },
+    "flood": {
+      "type": "object",
+      "properties": {
+        "standingWaterM": { "type": "number" },
+        "highWaterStainM": { "type": "number" },
+        "notes": { "type": "string" }
+      }
+    },
+    "modules": {
+      "type": "array",
+      "minItems": 8,
+      "items": {
+        "type": "object",
+        "required": ["id", "family", "gridM", "role", "priority"],
+        "properties": {
+          "id": { "type": "string" },
+          "family": { "type": "string" },
+          "gridM": {
+            "type": "array",
+            "items": { "type": "number" }
+          },
+          "role": { "type": "string" },
+          "priority": {
+            "type": "string",
+            "enum": ["blockout", "craft", "overlay", "hero", "later"]
+          },
+          "instance": { "type": "boolean" }
+        }
+      }
+    },
+    "killList": {
+      "type": "array",
+      "minItems": 5,
+      "items": { "type": "string" }
+    },
+    "qa": {
+      "type": "object",
+      "required": ["technical", "taste"],
+      "properties": {
+        "technical": { "type": "array", "items": { "type": "string" } },
+        "taste": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}
