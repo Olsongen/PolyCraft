@@ -12,7 +12,7 @@ Units: **display meters** (`1.0` = 1 m), **system centimeters** (Unreal 4 m → 
 | Path | What |
 |---|---|
 | [`docs/VISION.md`](docs/VISION.md) | Locked constitution |
-| [`kits/middlehelm-wetlands-ruins/`](kits/middlehelm-wetlands-ruins/) | World/AD brief, FPS concepts, PolyMat albedo/trim kickoffs |
+| [`kits/middlehelm-wetlands-ruins/`](kits/middlehelm-wetlands-ruins/) | World/AD brief, FPS concepts (GPT Image 2.0) |
 | [`contracts/kit.schema.json`](contracts/kit.schema.json) | What a PolyKit brief must contain |
 | [`max/`](max/) | 2027 bootstrap (units, grid, layers, menu) |
 | [`.cursor/skills/`](.cursor/skills/) | Worldbuilding, AD, visual-kickoff, kit-plan, Max, UV, QA |

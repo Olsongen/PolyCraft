@@ -1,20 +1,20 @@
--- PolyCraft scene bootstrap for 3ds Max 2027 (R29).
--- Display meters, system centimeters, 0.5 m home grid.
--- Run: drag into a viewport, or Scripting > Run Script.
+-- PolyCraft scene bootstrap — 3ds Max 2027 (R29 / 29000)
+-- DROP THIS FILE into a viewport (or Scripting > Run Script).
+-- Display meters, system centimeters, 0.5 m grid, MHWR layers.
 
 (
     if (maxVersion())[1] < 29000 then
     (
         messageBox "PolyCraft requires 3ds Max 2027 (maxVersion 29000 / R29)." title:"PolyCraft"
     )
-    else
+    else undo "PolyCraft Bootstrap" on
     (
         units.SystemType = #centimeters
         units.SystemScale = 1.0
         units.DisplayType = #Metric
         units.MetricType = #meters
 
-        -- System units are cm, so 50.0 = 0.5 m. Majors every 2 lines = 1 m.
+        -- 50 cm = 0.5 m. Majors every 2 lines = 1 m.
         SetGridSpacing 50.0
         SetGridMajorLines 2
         try (gridPrefs.spacing = 50.0) catch ()
@@ -43,16 +43,18 @@
         local meterPlane = getNodeByName "MHWR_QA_meter_plane"
         if meterPlane == undefined then
         (
-            meterPlane = Plane length:100 width:100 lengthsegs:1 widthsegs:1 pos:[0, 0, 0]
+            meterPlane = Plane length:100 width:100 lengthsegs:1 widthsegs:1
             meterPlane.name = "MHWR_QA_meter_plane"
             meterPlane.wirecolor = color 180 140 70
+            meterPlane.pivot = meterPlane.min
+            meterPlane.pos = [0, 0, 0]
         )
         local qaLayer = LayerManager.getLayerFromName "90_QA"
         if qaLayer != undefined then qaLayer.addNode meterPlane
 
         local formatted = units.formatValue 400.0
         format "PolyCraft bootstrap OK. Display meters, system cm. 400 cm formats as %.\n" formatted
-        format "Home grid 0.5 m (50 cm), majors 1 m. Snap 3D on.\n"
+        format "Home grid 0.5 m, majors 1 m. Snap 3D. Next drop: max/mhwr_first_assembly.ms\n"
         OK
     )
 )

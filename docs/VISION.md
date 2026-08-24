@@ -209,7 +209,7 @@ These are hats in the thought process even when one agent wears several. The AD 
 | E2 | PolyMesh? | **Locked** | ML sibling. Not our UV department. |
 | E3 | UVs? | **Locked** | Agentic artist-grade solve here. |
 | E4 | Plugins? | **Locked** | As needed. Field Tracing Displacement is cataloged, not pre-built. |
-| E5 | PolyMat? | **Locked** | Owns tiling solve + PBR maps. We feed albedo/trim **kickoffs** from image gen. |
+| E5 | PolyMat? | **Locked** | Owns tiling solve + PBR. Image gen is for concepts (GPT Image 2.0), not production trims. |
 
 ### Craft
 

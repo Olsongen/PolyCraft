@@ -5,11 +5,11 @@ description: Core PolyCraft image-gen step. Use GPT Image 2.0 for FPS concepts, 
 
 # Visual kickoff
 
-**Model:** GPT Image 2.0 until we say otherwise. Cursor `GenerateImage` has no model picker in this session — still treat GPT Image 2.0 as the studio default (concepts, refs in the prompt).
+**Concepts:** always allowed — Cursor **internal image gen** in this session (FPS stills, ambiguity, inspiration). That is the job.
 
-**Primary job: concepts.** FPS stills to answer ambiguity and find the look. That is where this earned its place in the pipeline.
+**Textures:** not always. Dry stone was okay; trim/wet/moss were rough. Skip texture gen unless we explicitly want a kickoff. PolyMat owns tiling and PBR.
 
-**Textures: not the job yet.** Dry stone albedo was okay-ish. Trim, wet, moss, overlays were rough. Do not spend cycles generating trim sheets or tile sets here until that bar moves. PolyMat still owns tiling solve and PBR.
+**GPT Image 2.0** is a preference when we have a picker. This session’s `GenerateImage` is the internal tool we use for concepts.
 
 ## When (required)
 

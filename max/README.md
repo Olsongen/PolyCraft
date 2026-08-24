@@ -14,17 +14,11 @@ PolyCraft does not run 3ds Max in the cloud. These scripts run **on your machine
 
 ## Run
 
-1. Open 3ds Max **2027**.
-2. Drag `max/polycraft_bootstrap.ms` into a viewport, **or** Scripting → Run Script.
-3. Optional: run `max/polycraft_menu.ms` once to add a **PolyCraft** menu.
+**Drop-in:** drag `max/polycraft_bootstrap.ms` into a 3ds Max **2027** viewport.
 
-Python (inside Max):
+Listener should print that 400 cm formats as meters, and you should see `MHWR_QA_meter_plane` (1 m) on layer `90_QA`.
 
-```python
-exec(open(r"<repo>/max/polycraft_bootstrap.py", encoding="utf-8").read())
-```
-
-Confirm the listener prints that `400` cm formats as meters (expect a `4` m class string).
+Then drop `max/mhwr_first_assembly.ms` — FPS camera at 1.7 m through the first vignette (4 m + 4 m + 8 m arcade, aisle, waterline, one standing vault). Blockout boxes only. Do not detail.
 
 ## Grid while modeling
 
