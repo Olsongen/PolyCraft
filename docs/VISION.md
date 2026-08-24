@@ -19,7 +19,7 @@ This is a working agreement. **Locked** = you said it. **Proposed** = my read.
 **Locked**
 
 - Agentic craft around **3ds Max 2027** for **artist-grade 3D kits**.
-- v1: **you and the agents in this repo**. Others after the tooling is proven.
+- v1: **you and local agents on the Windows PC that has 3ds Max 2027**. Not cloud agents. Others after the tooling is proven.
 - The work is the kit: models, Material IDs, organization, module planning, UVs, nuance. Engines are destinations.
 - Destinations: **Unreal Engine** and **Source Engine**. Craft is **engine-agnostic first**.
 - **Units:** artists work in **meters** (`1.0` = 1 m). The file is **cm-based** so Unreal stays clean. We do not model in centimeters in the viewport.
@@ -51,6 +51,7 @@ Studio law (host, units, default grid, process, harness) is shared. Place, camer
 - Engine-first (Nanite, VMF) before the place exists.
 - A plugin house. **Field Tracing Displacement** and UV/chamfer tools are on the table; they get built when a kit is waiting on them.
 - A second Polygen website, a Grok Bot farm, Max 2024–2026.
+- A **cloud agent** loop. Max is Windows-only (Autodesk does not ship Linux). Wine / KVM-passthrough is not a PolyCraft path. The agent sits on the same PC as 2027.
 
 ---
 
@@ -176,7 +177,7 @@ Pass/fail plus a written note. “Pretty good” is not a grade.
 
 **Taste:** ortho shaded/wire/checker, assembled vignette at gameplay camera, wear/trim/hero, vs concept, three-module stale test, **does this kit only work for this place’s story**.
 
-Cloud cannot run Max. Local scripts + images.
+Local Windows agent + the Max harness. Images from that session. No cloud Max.
 
 ---
 
@@ -205,7 +206,7 @@ These are hats in the thought process even when one agent wears several. The AD 
 | # | Question | Status | Answer |
 |---|---|---|---|
 | I1 | Name? | **Locked** | PolyCraft. PolyKit = the kit. |
-| I2 | v1 user? | **Locked** | You + agents here. |
+| I2 | v1 user? | **Locked** | You + **local** Cursor agents on the Windows Max 2027 PC. No cloud agents. |
 | I3 | Slice 1? | **Locked** | Skills + kit schema + Max 2027 harness (API/CLI/MCP) + kits registry + first proving-ground brief. No hero mesh. |
 
 ### Ecosystem
@@ -227,7 +228,7 @@ These are hats in the thought process even when one agent wears several. The AD 
 | C3 | Grid? | **Locked** | 0.5 / 1 / 2 / 4 / 8 m. Prefer on-grid; exceptions socket back. |
 | C4 | Camera? | **Locked** | Per kit (`brief.camera`). Slice 1 proving ground is FPS, eye ~1.7 m. |
 | C5 | First kit? | **Locked** | Middlehelm wetlands ruins is the first proving ground, not the house kit type. Ref: Trois-Fontaines abbey (church ruin). |
-| C6 | Drive Max? | **Locked** | PolyCraft API + CLI + MCP against a Max 2027 localhost harness. Agents run scripts. No pretend-Max in the cloud. Drag-and-drop is emergency only. |
+| C6 | Drive Max? | **Locked** | Local agent on the Windows Max 2027 PC. API + CLI + MCP → localhost harness. Agents run scripts. No cloud agents. No Linux Max. Drag-and-drop is emergency only. |
 
 ---
 
@@ -236,7 +237,7 @@ These are hats in the thought process even when one agent wears several. The AD 
 1. This document — frozen for identity.
 2. Skills: worldbuilding, art-direction, visual-kickoff, kit-plan, max-2027-craft, harness, artist-UV, visual-QA.
 3. `contracts/kit.schema.json` + `contracts/harness.protocol.json`.
-4. Max 2027 harness: API / CLI / MCP + in-Max listener. Studio bootstrap is a command, not a drag.
+4. Local Windows agent drives Max 2027 via API / CLI / MCP + in-Max listener. Studio bootstrap is a command, not a drag.
 5. `kits/` registry — each kit owns brief, jobs, and prefixed nodes. Slice 1 proving ground: `kits/middlehelm-wetlands-ruins/`.
 
 ---
@@ -252,5 +253,6 @@ These are hats in the thought process even when one agent wears several. The AD 
 - [x] Slice 1 scope
 - [x] First proving-ground kit: Middlehelm wetlands ruins (not the house type)
 - [x] Drive Max via API / CLI / MCP / harness
+- [x] Local Windows agents only (no cloud agent loop)
 
-Vision lock for identity is closed. Execute slice 1 from `kits/README.md`.
+Vision lock for identity is closed. Execute slice 1 from `kits/README.md` **in a local Cursor session on the Max PC**.

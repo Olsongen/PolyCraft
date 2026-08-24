@@ -63,6 +63,7 @@ class CliTests(unittest.TestCase):
             self.skipTest("harness mock port leaked into env")
         self.assertFalse(body["reachable"])
         self.assertEqual(body["backend"], "unreachable")
+        self.assertEqual(body["v1_host"], "windows-max2027-local")
         self.assertIn("install-harness", body["hint"])
 
 

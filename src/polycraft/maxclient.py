@@ -34,6 +34,8 @@ class MaxStatus:
             "port": self.port,
             "detail": self.detail,
             "hint": self.hint,
+            "v1_host": "windows-max2027-local",
+            "platform": sys.platform,
         }
 
 
@@ -208,8 +210,9 @@ def batch_filein(script: Path, timeout: float = 180.0) -> dict[str, Any]:
 
 
 UNREACHABLE_HINT = (
-    "This process cannot see 3ds Max 2027. On the Windows box: "
-    "`polycraft max install-harness`, start Max 2027, then `polycraft max bootstrap`."
+    "Max 2027 harness not on localhost. v1 agents run on the Windows PC that has Max. "
+    "Start 3ds Max 2027, then: python -m polycraft max install-harness (once) "
+    "and python -m polycraft max bootstrap."
 )
 
 

@@ -1,6 +1,6 @@
 # PolyCraft
 
-Agentic 3ds Max **2027** craft for artist-grade kits. v1 is Ethan + agents in this repo.
+Agentic 3ds Max **2027** craft for artist-grade kits. v1 is Ethan + **local** Cursor agents on the Windows PC that has Max 2027. Not cloud agents.
 
 The product is the **API, CLI, MCP, and harness** — a skillset for agentic kit development. A **PolyKit** is one place. The studio is kit-agnostic.
 
@@ -17,20 +17,22 @@ Registry and status: [`kits/README.md`](kits/README.md).
 
 Do not treat the first proving ground as the house kit type.
 
-## Drive Max (agents)
+## Drive Max (local agent)
+
+Open this repo in **Cursor on the Windows Max 2027 PC**. Start Max. Then the local agent runs:
 
 ```bash
 python -m polycraft kits
 python -m polycraft validate
 python -m polycraft max status
-python -m polycraft max install-harness    # once, on the Windows Max 2027 box
+python -m polycraft max install-harness    # once
 python -m polycraft max bootstrap
 python -m polycraft max job middlehelm-wetlands-ruins first-assembly
 ```
 
-MCP server: `.cursor/mcp.json` → `scripts/polycraft_mcp.py`. Same API as the CLI.
+MCP: `.cursor/mcp.json` → `scripts/polycraft_mcp.py`. Same API as the CLI.
 
-Cloud Linux cannot run 3ds Max. A local Cursor session on the Max box can. Drag-and-drop is emergency only.
+Max is Windows-only. No cloud loop. Drag-and-drop is emergency only.
 
 ## Repo map
 

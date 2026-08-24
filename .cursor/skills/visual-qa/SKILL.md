@@ -5,7 +5,7 @@ description: Technical and taste QA for PolyKits. Use at every handoff and after
 
 # Visual QA
 
-Both tracks can fail the kit. Cloud cannot run Max; drive a local 2027 session through the harness and review contracts + images.
+Both tracks can fail the kit. The **local** Windows agent drives 2027 through the harness and reviews contracts + images from that session.
 
 ## Technical
 

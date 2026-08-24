@@ -1,0 +1,11 @@
+---
+description: v1 agents run locally on the Windows Max 2027 PC. Not in the cloud.
+alwaysApply: true
+---
+
+# Local agent only
+
+- v1 execution is a **local Cursor agent on the Windows PC that has 3ds Max 2027**.
+- Do not run craft, bootstrap, or kit jobs from a cloud Linux agent. Max is Windows-only. Wine / KVM is not our path.
+- Drive Max through the harness (`python -m polycraft max …` / MCP). Same machine, localhost.
+- If this process is not on that PC, `max status` will be unreachable. Stop. Do not fake a scene.

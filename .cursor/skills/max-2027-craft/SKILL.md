@@ -7,7 +7,7 @@ description: 3ds Max 2027 craft for PolyCraft. Units (meters display / cm system
 
 Host is **3ds Max 2027** only. Gate: `(maxVersion())[1] >= 29000`.
 
-Drive Max through the **harness** skill (`python -m polycraft max …` / MCP). Do not ask the user to drag scripts.
+Drive Max through the **harness** skill from this Windows PC (`python -m polycraft max …` / MCP). Do not ask the user to drag scripts. If you are a cloud agent, stop.
 
 ## Units (law)
 

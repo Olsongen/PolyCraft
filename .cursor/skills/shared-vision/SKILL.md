@@ -7,6 +7,8 @@ description: Facilitate vision lock for PolyCraft. Identity is locked; use when 
 
 Identity is locked (`docs/VISION.md`). New kits still start here: world + AD before modules.
 
+v1 agents are **local** on the Windows Max 2027 PC. Not cloud.
+
 ## Sequence
 
 1. Read `docs/VISION.md` and `kits/README.md`.

@@ -2,7 +2,7 @@
 
 PolyCraft is the studio. A **PolyKit** is one place. This folder is the registry — not a house style.
 
-Studio law (Max 2027, display meters / system cm, default 0.5–8 m grid, world+AD before modules, harness) is shared. Place, camera, wear, naming prefix, layers, and assembly nodes are **per kit**. Do not inherit another kit’s founding act, silhouette, or module language.
+Studio law (local Windows Max 2027, display meters / system cm, default 0.5–8 m grid, world+AD before modules, harness) is shared. Place, camera, wear, naming prefix, layers, and assembly nodes are **per kit**. Do not inherit another kit’s founding act, silhouette, or module language.
 
 Status values match `contracts/kit.schema.json`: `vision` → `planned` → `blockout` → `craft` → `qa` → `handoff`.
 

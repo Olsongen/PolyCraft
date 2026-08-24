@@ -1,6 +1,6 @@
 # Max 2027 — studio + harness
 
-PolyCraft does not run 3ds Max in the cloud. Agents on the **Windows Max box** drive 2027 through the harness.
+The local Cursor agent on this Windows PC drives 2027 through the harness. Max is not a Linux product; we do not Wine or VM it.
 
 This folder is **studio law only**. Kit-prefixed nodes (`MHWR_…`, and later kits) are created by `kits/<id>/max/` jobs.
 
