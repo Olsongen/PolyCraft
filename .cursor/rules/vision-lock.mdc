@@ -13,4 +13,7 @@ This repository is in **vision lock**. Read `docs/VISION.md` before any work.
 - Host DCC is **3ds Max 2027 only** (R29, `maxVersion` 29000). pymxs + PySide6. No MaxPlus. No back-compat for older Max.
 - If the user is still discussing identity, ecosystem, or slice 1, the only valid edits are `docs/VISION.md`, this rule, and related skills. Not application code.
 - Coming to a shared vision with questions answered is the work. Skipping it to “make something demoable” is a failure.
-- Working name is **PolyCraft**. Do not fork PolyMesh (ML decimation + artist UV). Do not stand up Grok Bots as a parallel role system; roles are skills in this repo.
+- Name is **PolyCraft**. Kits first; Unreal and Source are destinations, not the craft.
+- Agentic artist-grade UV solve is in scope. PolyMesh is an ML sibling, not the UV department.
+- New Max 2027 tools/plugins are allowed when they unblock kit craft. Do not start a plugin product line during vision lock.
+- Do not stand up Grok Bots as a parallel role system; roles are skills in this repo.

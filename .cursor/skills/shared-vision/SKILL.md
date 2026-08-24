@@ -1,6 +1,6 @@
 ---
 name: shared-vision
-description: Facilitate vision lock for PolyCraft. Use when discussing what this repo is, naming (PolyCraft vs PolyKit), planning a kit, or when docs/VISION.md still has Open or Proposed items.
+description: Facilitate vision lock for PolyCraft. Use when discussing kits, engines, UVs, Max plugins, or when docs/VISION.md still has Open or Proposed items.
 ---
 
 # Shared vision
@@ -26,7 +26,9 @@ A vision is locked when a senior environment artist could start blockout tomorro
 
 - Scaffolding Next.js because the repo was empty.
 - Treating Polygen generation as a substitute for Max craft.
-- Forking PolyMesh (decimation / UV-ML product) into this agent repo.
+- Treating PolyMesh as our UV department, or cloning it as an ML product here.
+- Building Unreal/Source pipelines before the kit is true.
+- Writing plugins during vision lock “for later.”
 - Standing up Grok Bots instead of skills + subagents.
 - “Modular kit” that is four walls and a floor.
 - Answering taste with adjectives instead of references, camera, and wear logic.

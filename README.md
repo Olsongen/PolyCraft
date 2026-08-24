@@ -1,20 +1,15 @@
-# PolyCraft (working name)
+# PolyCraft
 
-Agentic 3ds Max **2027** craft for artist-grade modular kits. v1 is **Ethan + agents in this repo**. Other users only after the tooling is proven.
+Agentic 3ds Max **2027** craft for artist-grade modular kits (**PolyKits**).
 
-A **PolyKit** is what this system produces. [PolyMesh](https://www.3dpolygen.com) is a separate **ML product** (SOTA decimation, artist-grade UV) — not agentic, not forked here. Polygen owns concept / kit-sheets / PolyMat.
+v1 is **Ethan + agents in this repo**. Destinations later: **Unreal Engine** and **Source Engine**. The craft itself is kit-first and engine-agnostic: models, IDs, organization, module planning, Blizzard-level nuance, artist-grade UVs.
 
-**Status:** vision lock. See [`docs/VISION.md`](docs/VISION.md). Do not model or scaffold a product until that agreement is signed.
+We may author new Max tools and plugins when stock Max is the ceiling. [PolyMesh](https://www.3dpolygen.com) is a sibling ML product (decimation, UV understanding) — not our UV department.
+
+**Status:** vision lock. [`docs/VISION.md`](docs/VISION.md) is the agreement. Do not model or ship a product until remaining sign-off boxes are checked.
 
 ## Host
 
-- Autodesk 3ds Max **2027** (R29, `maxVersion` `29000`)
-- Python via **pymxs** (not MaxPlus)
-- UI via **PySide6** + `qtmax`
-
-## How we work here
-
-1. Read `docs/VISION.md`.
-2. **Locked** is law. **Proposed** / **Open** are unsigned.
-3. No web app, no Grok Bot farm, no UV-ML clone, unless the vision says so.
-4. Rules: `.cursor/rules`. Skills: `.cursor/skills`.
+- 3ds Max **2027** (R29, `maxVersion` `29000`)
+- pymxs, PySide6, `qtmax`
+- C++ / .NET 10 plugins only when Python cannot do the job
