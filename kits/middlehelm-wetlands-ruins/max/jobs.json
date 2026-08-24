@@ -1,0 +1,7 @@
+{
+  "first-assembly": {
+    "script": "mhwr_first_assembly.ms",
+    "requires": ["bootstrap"],
+    "notes": "Walkable nave: 4+4+8 m arcade, aisle, waterline, one standing vault. Do not detail."
+  }
+}

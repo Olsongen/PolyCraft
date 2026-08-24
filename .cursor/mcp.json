@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "polycraft": {
+      "command": "python",
+      "args": ["scripts/polycraft_mcp.py"]
+    }
+  }
+}

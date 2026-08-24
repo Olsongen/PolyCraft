@@ -18,12 +18,12 @@ Turn the place into a **language**: grid, sockets, IDs, UV policy, module list, 
 3. Material IDs at kit scale.
 4. UV strategy (trim vs unique vs stack). Do not unique-unwrap modular walls.
 5. Module table with `priority`: blockout / craft / overlay / hero / later.
-6. First assembly test — the smallest walkable proof (see Middlehelm brief).
+6. First assembly — the smallest walkable proof named on **this** brief.
 
 ## Active kit
 
-`kits/middlehelm-wetlands-ruins/`. Arcade 4 m + wide 8 m, pier 1 m, aisle 2 m, waterline trim, one standing vault. Hero west front is **not** blockout.
+`python -m polycraft kits` then read that brief. Assembly jobs live in `kits/<id>/max/jobs.json`. Do not copy another kit’s bays, trims, or prefixes.
 
 ## Output
 
-`brief.json` must still validate against `contracts/kit.schema.json`.
+`brief.json` must still validate (`python -m polycraft validate`).

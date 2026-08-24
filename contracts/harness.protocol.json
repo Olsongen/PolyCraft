@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://polycraft.local/contracts/harness.protocol.json",
+  "title": "PolyCraft Max harness protocol",
+  "description": "JSON messages between the PolyCraft API/CLI/MCP and the listener that runs inside 3ds Max 2027. Localhost only. v1.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["v", "op"],
+  "properties": {
+    "v": { "const": 1 },
+    "op": {
+      "type": "string",
+      "enum": ["ping", "bootstrap", "filein", "eval_ms", "eval_py", "scene_info"]
+    },
+    "path": { "type": "string" },
+    "code": { "type": "string" },
+    "id": { "type": "string" }
+  }
+}

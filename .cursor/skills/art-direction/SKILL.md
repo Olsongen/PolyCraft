@@ -1,11 +1,11 @@
 ---
 name: art-direction
-description: Blizzard-level art direction for a PolyKit. Use after worldbuilding and before modeling. FPS read, material story, wear causality, modularity without stamp.
+description: Blizzard-level art direction for a PolyKit. Use after worldbuilding and before modeling. Camera read, material story, wear causality, modularity without stamp.
 ---
 
 # Art direction
 
-Wear the AD hat before the modeler hat. Read the kit `BRIEF.md`.
+Wear the AD hat before the modeler hat. Read the **active** kit `BRIEF.md` from `kits/README.md`.
 
 ## Job
 
@@ -13,20 +13,20 @@ Decide how the place **looks and reads**, not how many walls it has.
 
 ## Pass
 
-1. **Silhouette** at gameplay camera (FPS eye and 12–20 m).
+1. **Silhouette** at the gameplay camera the brief named.
 2. **One material story** per family, then disciplined exceptions.
-3. **Wear with causality** (this kit: shared waterline 1.0 m, standing water 0.35 m).
-4. **Modular without stamp** (this kit: 4 m bay + 8 m wide bay + overlays + collapse that still sockets).
+3. **Wear with causality** — from this brief, not from another kit.
+4. **Modular without stamp** — variation and collapse that still sockets.
 5. **References:** what to steal as grammar, what not to photocopy.
-6. **Image gen (GPT Image 2.0)** — `visual-kickoff` skill. FPS stills until the camera is obvious. Do not generate trim/tile sets as production. Kill frames that fight this brief.
+6. **Image gen (GPT Image 2.0)** — `visual-kickoff` skill. Stills until the camera is obvious. Do not generate trim/tile sets as production. Kill frames that fight this brief.
 
 ## Fail
 
 - Adjectives without a camera (“moody, overgrown”).
-- D4 isometric chunking as the only read on an FPS kit.
+- A previous kit’s camera or chunking used as the only read.
 - Wear as cavity noise.
-- Copying Trois-Fontaines’ classical courtyard.
+- Copying a reference’s later occupation as kit language.
 
 ## Output
 
-Fill `artDirection`, `references`, `flood`, and taste items in `qa`. Generate concepts into `concepts/`. Then hand to kit-plan.
+Fill `artDirection`, `references`, and taste items in `qa`. Generate concepts into that kit’s `concepts/`. Then hand to kit-plan.

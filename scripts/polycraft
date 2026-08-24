@@ -1,7 +1,4 @@
-"""Back-compat wrapper. Prefer: python -m polycraft validate"""
-
-from __future__ import annotations
-
+#!/usr/bin/env python3
 import sys
 from pathlib import Path
 
@@ -9,4 +6,4 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from polycraft.cli import main
 
 if __name__ == "__main__":
-    raise SystemExit(main(["validate", *sys.argv[1:]]))
+    raise SystemExit(main())

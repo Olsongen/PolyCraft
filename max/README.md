@@ -1,25 +1,34 @@
-# Max 2027 bootstrap
+# Max 2027 — studio + harness
 
-PolyCraft does not run 3ds Max in the cloud. These scripts run **on your machine** in Max 2027.
+PolyCraft does not run 3ds Max in the cloud. Agents on the **Windows Max box** drive 2027 through the harness.
 
-## What it does
+This folder is **studio law only**. Kit-prefixed nodes (`MHWR_…`, and later kits) are created by `kits/<id>/max/` jobs.
+
+## Harness
+
+`max/harness/listener.py` listens on `127.0.0.1:17927` inside Max. Protocol: `contracts/harness.protocol.json`.
+
+```bash
+python -m polycraft max install-harness   # writes Max user startup
+# start 3ds Max 2027
+python -m polycraft max status
+python -m polycraft max bootstrap
+```
+
+Emergency only: fileIn `max/harness/startup.ms` or `max/polycraft_bootstrap.ms`.
+
+## What bootstrap does
 
 - Refuses to run below `maxVersion` **29000** (R29 / 2027)
 - **System units:** centimeters (`SystemScale` 1.0)
 - **Display units:** metric **meters** — you type `4.0`, not `400`
 - **Home grid:** 0.5 m (50 cm), major lines every 1 m
 - **Snap:** 3D on
-- **Layers:** `00_REF` … `90_QA` (same as the Middlehelm brief)
-- **QA plane:** `MHWR_QA_meter_plane` — 1 m × 1 m at the origin
+- **Studio layers:** `00_REF`, `10_BLOCKOUT`, `20_CRAFT`, `60_ASSEMBLY`, `90_QA`
+- **QA plane:** `PC_QA_meter_plane` — 1 m × 1 m at the origin
 
-## Run
-
-**Drop-in:** drag `max/polycraft_bootstrap.ms` into a 3ds Max **2027** viewport.
-
-Listener should print that 400 cm formats as meters, and you should see `MHWR_QA_meter_plane` (1 m) on layer `90_QA`.
-
-Then drop `max/mhwr_first_assembly.ms` — FPS camera at 1.7 m through the first vignette (4 m + 4 m + 8 m arcade, aisle, waterline, one standing vault). Blockout boxes only. Do not detail.
+Kit briefs may add layers (`20_ARCH`, `30_VAULT`, …). Those come from the kit job, not from bootstrap.
 
 ## Grid while modeling
 
-Prefer **0.5 / 1 / 2 / 4 / 8 m**. Organic overlays may miss; they still snap to sockets. See `kits/middlehelm-wetlands-ruins/BRIEF.md`.
+Prefer **0.5 / 1 / 2 / 4 / 8 m** unless the active brief names a different step. Organic overlays may miss; they still snap to sockets.

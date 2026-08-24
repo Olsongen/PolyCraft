@@ -5,28 +5,26 @@ description: Technical and taste QA for PolyKits. Use at every handoff and after
 
 # Visual QA
 
-Both tracks can fail the kit. Cloud cannot run Max; review contracts + images from a local 2027 scene.
+Both tracks can fail the kit. Cloud cannot run Max; drive a local 2027 session through the harness and review contracts + images.
 
 ## Technical
 
-- Display meters, system cm (bootstrap still applied).
-- On-grid 0.5 / 1 / 2 / 4 / 8 m, or exception rule honored.
+- Display meters, system cm (`python -m polycraft max bootstrap` still applied).
+- On-grid per the brief (studio default 0.5 / 1 / 2 / 4 / 8 m), or exception rule honored.
 - Pivots per socket law.
-- Naming + layers.
+- Naming + layers from **this** brief.
 - MatIDs match the brief.
-- Middlehelm: waterline trim at 1.0 m on every wall.
 - Instances/XRefs vs illegal copies.
+- Then the brief’s own `qa.technical` list.
 
-## Taste (FPS)
+## Taste
 
-- Walk at 1.7 m. If it only works in ortho, it failed.
-- Drowned austere church, not a dungeon.
-- Standing vault beside open bay.
-- Three-arcade stale test: waterline + overlays must save it.
-- Temperate wetland overgrowth, not jungle.
-- No 18th-century classical language from Trois-Fontaines’ later gate.
+- Walk at the camera the brief named. If it only works in ortho, it failed.
+- The place in the brief, not a generic dungeon and not another kit.
+- Three-module stale test.
 - Pass/fail plus a written note. “Pretty good” is not a grade.
+- Then the brief’s own `qa.taste` list.
 
 ## First assembly
 
-The vignette in `kits/middlehelm-wetlands-ruins/BRIEF.md` must be walkable before detailing.
+The vignette on the **active** brief must be walkable before detailing. Run it with `python -m polycraft max job <id> first-assembly`.

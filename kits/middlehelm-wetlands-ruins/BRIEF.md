@@ -112,6 +112,8 @@ Middlehelm is not Champagne. We translate: an austere order in the Middlehelm lo
 
 ## First assembly test (before any detailing)
 
+Harness job: `python -m polycraft max job middlehelm-wetlands-ruins first-assembly`
+
 Build only enough to walk:
 
 1. `MHWR_floor_nave_4m` × 2 (flooded)

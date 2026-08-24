@@ -1,6 +1,8 @@
 -- PolyCraft scene bootstrap — 3ds Max 2027 (R29 / 29000)
--- DROP THIS FILE into a viewport (or Scripting > Run Script).
--- Display meters, system centimeters, 0.5 m grid, MHWR layers.
+-- Run via:  python -m polycraft max bootstrap
+-- Emergency: Scripting > Run Script (do not make drag-and-drop the loop).
+-- Studio only: display meters, system centimeters, 0.5 m grid, generic layers.
+-- Do not create kit-prefixed nodes here. Kit jobs live under kits/<id>/max/.
 
 (
     if (maxVersion())[1] < 29000 then
@@ -24,13 +26,11 @@
         snapMode.active = true
         snapMode.type = #3D
 
+        -- Studio bands only. Kit-specific layers (ARCH, VAULT, VEG, …) come from the kit script.
         local layerNames = #(
             "00_REF",
             "10_BLOCKOUT",
-            "20_ARCH",
-            "30_VAULT",
-            "40_OVERLAY",
-            "50_VEG",
+            "20_CRAFT",
             "60_ASSEMBLY",
             "90_QA"
         )
@@ -40,11 +40,11 @@
                 LayerManager.newLayerFromName n
         )
 
-        local meterPlane = getNodeByName "MHWR_QA_meter_plane"
+        local meterPlane = getNodeByName "PC_QA_meter_plane"
         if meterPlane == undefined then
         (
             meterPlane = Plane length:100 width:100 lengthsegs:1 widthsegs:1
-            meterPlane.name = "MHWR_QA_meter_plane"
+            meterPlane.name = "PC_QA_meter_plane"
             meterPlane.wirecolor = color 180 140 70
             meterPlane.pivot = meterPlane.min
             meterPlane.pos = [0, 0, 0]
@@ -54,7 +54,8 @@
 
         local formatted = units.formatValue 400.0
         format "PolyCraft bootstrap OK. Display meters, system cm. 400 cm formats as %.\n" formatted
-        format "Home grid 0.5 m, majors 1 m. Snap 3D. Next drop: max/mhwr_first_assembly.ms\n"
+        format "Home grid 0.5 m, majors 1 m. Snap 3D. Studio node: PC_QA_meter_plane.\n"
+        format "Next: python -m polycraft max job <kit-id> first-assembly\n"
         OK
     )
 )
