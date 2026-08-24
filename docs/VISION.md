@@ -10,31 +10,20 @@ This is a working agreement. **Locked** = you said it. **Proposed** = my read. *
 
 **Locked**
 
-- Agentic craft around **3ds Max 2027**, aimed at **artist-grade 3D kits**.
-- v1 users: **you and the agents in this repo**. Other people after the tooling is proven.
-- The work is the kit: 3ds models, Material IDs, organization, planning, Blizzard-level nuance, module planning. Not an engine feature checklist.
-- Engine destinations are **Unreal Engine** and **Source Engine**. Craft is **engine-agnostic first**. Export adapters come after the kit is true.
-- Taste bar: Diablo 4 / Blizzard environment art — modular **and** alive.
-- At minimum: a serious partner on **solid base meshes**.
-- Rules and skills for how we plan and execute; shared vision with questions answered before geometry.
-- Adjacent to Polygen / PolyMesh / PolyMat / Kingdom Crafter — not a rewrite.
-- **PolyMesh** is an ML **product**: SOTA decimation + artist-grade UV understanding. Not agentic.
-- **PolyCraft is agentic**, so we **do** solve UVs to artist grade here. That is craft + tools, not “defer to PolyMesh.”
-- We may **author new 3ds Max tools and plugins** whenever stock Max is the ceiling: UV solvers, chamfer profile control, UI, and anything else the kit ecosystem needs to run at full capability.
+- Agentic craft around **3ds Max 2027** for **artist-grade 3D kits**.
+- v1: **you and the agents in this repo**. Others after the tooling is proven.
+- The work is the kit: models, Material IDs, organization, module planning, UVs, nuance. Engines are destinations.
+- Destinations: **Unreal Engine** and **Source Engine**. Craft is **engine-agnostic first**.
+- **Units:** artists work in **meters** (`1.0` = 1 m). The file is **cm-based** so Unreal stays clean. We do not model in centimeters in the viewport.
+- Bar: **absolute highest quality, nuance, and taste** — a Blizzard environment studio, not “good for AI.”
+- Planning is **worldbuilding + art direction + env art + modeling**, big to small. Not surface-level kit templates.
+- PolyMesh is an ML **product** (decimation, UV understanding). Not our UV department.
+- PolyCraft **solves UVs to artist grade** because we are agentic.
+- New Max **tools and plugins are allowed** when they unblock craft. We do not invent tools because they sound cool.
 
 **Thesis**
 
-PolyCraft is the agentic Max craft OS. PolyKit is the kit (meshes, IDs, sockets, UVs, assembly proof, briefs). Polygen is concept / style / kit-sheets / PolyMat. PolyMesh is the ML sibling we can call; it is not our UV department. Kingdom Crafter is a destination, not the DCC.
-
-| Layer | Kind | Owns |
-|---|---|---|
-| **Polygen** | Product + agents | Intent, style, concept, kit *sheets*, extract/refine, generation |
-| **PolyMat** | Product | 4K PBR tileables, trims, atlases |
-| **PolyMesh** | ML product | Decimation, learned UV understanding |
-| **PolyCraft (this)** | Agentic system + Max tools | Kit as a production system: plan, model, IDs, organize, UV *solve*, script, plugin, QA, taste |
-| **PolyKit** | Output | The kit itself |
-| **Unreal / Source** | Destinations | Handoff after the kit is right |
-| **Kingdom Crafter** | Destination | Shipped kits, when we choose to publish |
+PolyCraft is a tiny Blizzard-style kit studio in agent form: AD and worldbuilder first, then env art and Max craft, then tools. PolyKit is the output. Polygen / PolyMat / PolyMesh are siblings, not this repo.
 
 Generated topology can be reference or kickoff. It is never the kit.
 
@@ -42,102 +31,124 @@ Generated topology can be reference or kickoff. It is never the kit.
 
 ## 2. What this is not
 
-- A second Polygen website.
-- Engine-first (Nanite settings, VMF quirks) before the kit exists.
-- A chatbot that dumps boxes.
-- Stale modular: four walls, one floor, obvious tiling.
-- Max 2024–2026. Host is **2027 only**.
-- A public multi-user product in slice 1.
-- A plugin farm in search of a problem. Tools exist because a kit step is blocked.
+- A generic modular-pack generator (four walls, one floor, stamp tiling).
+- Quick AD: “dark fantasy, stone, moss” and then modeling.
+- Engine-first (Nanite, VMF) before the place exists.
+- A plugin house. **Field Tracing Displacement** and UV/chamfer tools are on the table; they get built when a kit is waiting on them.
+- A second Polygen website, a Grok Bot farm, Max 2024–2026.
 
 ---
 
-## 3. Kits first (the center)
+## 3. Units (locked)
 
-Everything else is in service of a kit a lead environment artist would trust.
+Artists must think in meters. Unreal must receive centimeters. Max must not fight either.
 
-That means:
-
-- **Grid law** — module sizes, snap, pivots as a contract.
-- **Socket language** — straight, inner/outer corner, cap, column, floor-to-wall, trim, hero insert.
-- **Module plan** — the set, the variants, what is instance vs unique, what is allowed to break the module without breaking the grid.
-- **Material IDs** — planned at kit scale before hero detailing, because trims, atlases, and shaders are kit-level.
-- **Organization** — naming, layers, XRefs, assembly scene vs source modules.
-- **Nuance** — wear story, silhouette, not-stale tiling, concept fidelity, Blizzard restraint + drama.
-- **UVs** — artist-grade, kit-aware (trim vs unique vs atlas, stacking, texel, seams that serve the module). Agentic solve in Max; custom solver if stock Unwrap is the ceiling. PolyMesh is optional ML assist, not the owner.
-- **Usability** — an LD (or a future engine adapter) can assemble without fighting the assets.
-
-Unreal vs Source changes **handoff** (units scale, lightmap channel, collision flavor, nanite vs cheap meshes). It does not change whether a 400-unit wall is actually 400, whether ID 3 is trim, or whether three modules in a row look like a stamp.
-
----
-
-## 4. Engines: destinations, not the craft
-
-**Locked:** Unreal and Source are the main targets. Initial work is engine-agnostic.
-
-**Proposed defaults**
-
-| Topic | Stance |
+| Layer | Value |
 |---|---|
-| Canonical Max units | **1 generic unit = 1 cm** in the scene. Artists think metric. |
-| Unreal handoff | 1:1 (uu = cm). |
-| Source handoff | Scale adapter later (Source world units are inch-heritage). Do not model a second kit in inches. |
-| Lightmaps | Source cares about UV2. That is a handoff channel, planned in the kit UV strategy, not a reason to unwrap twice in a panic at export. |
-| Collision / LOD / Nanite | Per-kit, mostly per-engine. Deferred until a brief names them. Blockout does not wait on Nanite. |
+| **What you type in Max** | `1.0` = **1 meter**. A 4 m wall is `4.0`, never `400`. |
+| **System Unit Scale** | **1 unit = 1.0 centimeter** (cm-based file). |
+| **Display Unit Scale** | **Meters**. |
+| **Meaning** | Display `4.0 m` = 400 system cm = **400 Unreal uu**. Clean 1:1 to UE after the 100× that meters→cm already is. |
+| **Grid / snap** | Meter grid. Typical snaps: `0.05`, `0.1`, `0.25`, `0.5`, `1`, `2`, `4` m. |
+| **Source handoff** | Later adapter (inch-heritage world units). Do not model a second kit in inches. |
+
+Bootstrap **must** set and lock system+display units. Mixing them mid-file is a failed kit. Never “work in cm” in the viewport to make UE happy — that is what system units are for.
+
+Module talk is in meters: 2 m / 4 m walls, 0.1 m trim, not 200/400/10 cm.
+
+---
+
+## 4. Big to small (the real planning stack)
+
+A PolyKit exists to serve a **place and a story**. The module list is the last part of planning, not the first.
+
+Treat this as a Blizzard env **team**, not a prompt expander.
+
+### 4.1 Worldbuilding (expert, not flavor text)
+
+Go through the idea until a lead would sign it:
+
+- Who lived here, who lives here now, what broke or endured.
+- Climate, geology, economy, faith, tech — only what the space can show.
+- Player path and camera: what they see at 10 m, at 2 m, at the door.
+- Scale of the space (closet vs nave vs street) and what “one module” means in that space.
+- What must be **readable as landmark** vs what should disappear into the set.
+- What would be *wrong* for this place (the kill list).
+
+If this pass could apply to any dungeon, it failed.
+
+### 4.2 Art direction (Blizzard hat)
+
+- Silhouette language and massing (chunk, slope, ornament budget).
+- One material story per family, then disciplined exceptions.
+- Wear with causality: water, hands, load, liturgy, neglect — not cavity noise.
+- Color/value at gameplay camera, not in a beauty-lighting cheat.
+- References that are specific (which D4 zone, which cathedral, which concept frame) and what we will **not** copy.
+- How the kit stays modular **without** reading as tile.
+
+### 4.3 Kit as a language for that space
+
+Only now: which modules this place actually needs.
+
+- Straights, inner/outer corners, caps, columns, floors, trims, overlays, breakage, hero inserts.
+- What is instanced, what is unique, what is allowed to break the module without breaking the **grid**.
+- Material IDs as a kit-level shader/trim plan.
+- UV strategy (trim / unique / atlas / stacking) that serves those IDs.
+- Variation designed in so three modules in a row do not stamp.
+
+### 4.4 Then Max
+
+Blockout on the meter grid. Socket-proof. Craft. UV. QA. Engine adapters last.
+
+Skipping 4.1–4.3 and jumping to a wall kit is how you get a technically correct, soulless pack.
 
 ---
 
 ## 5. How we execute
 
-1. **Vision lock** — this file, then a per-kit brief. No geometry.
-2. **Kit plan** — modules, grid, sockets, naming, MatIDs, UV strategy, instance/XRef map.
-3. **Scene bootstrap (Max 2027)** — units, grid, snaps, layers, naming, PolyCraft menu.
-4. **Blockout** — on grid. Socket-proof 3–5 modules before detailing.
-5. **Craft** — modifier-first, instance-first, reference-first. Smart Bevel after Booleans. Custom chamfer/profile tools when stock bevels lie.
-6. **UV + IDs** — artist-grade solve here. Call PolyMesh if ML decimation/UV insight helps. Write a solver if Unwrap_UVW cannot hit the bar.
-7. **Visual QA** — technical + taste. Fail closed.
-8. **Handoff** — Unreal and/or Source adapters, only after the kit is true.
+1. **Constitution** — this file.
+2. **World + AD** — section 4, written into the kit brief. No geometry.
+3. **Kit plan** — modules, grid, sockets, naming, IDs, UV strategy, instance/XRef.
+4. **Max 2027 bootstrap** — meters display, cm system, grid, snaps, layers, naming, menu.
+5. **Blockout** — socket-proof 3–5 modules.
+6. **Craft** — modifier-first, instance-first, XRef-first.
+7. **UV + IDs** — artist-grade solve here.
+8. **Visual QA** — technical + taste. Fail closed.
+9. **Handoff** — Unreal and/or Source, after the kit is true.
 
-If step 1 is incomplete, the only valid work is more agreement.
+If step 2 is shallow, stop. More thinking. Not more boxes.
 
 ---
 
-## 6. 3ds Max 2027 — stock craft and our tools
+## 6. Max 2027 — stock, and tools as needed
 
-**Locked:** host is Max 2027 (R29, `maxVersion` `29000`). We may ship new tools and plugins.
+**Host:** 2027 only (R29, `maxVersion` `29000`). pymxs, PySide6, `qtmax`. C++ / .NET 10 only when Python cannot.
 
-**Stock we will actually use**
+**Stock we will use:** Boolean + Smart Bevel, Array (surface / Z-growth / spline pack), Field Helper, Data Channel, Volume Select, Noise Plus (tiny), `objXRefMgr`, Unwrap until it is the ceiling.
 
-- pymxs (no MaxPlus). PySide6 + `qtmax`. Python menu actions are valid in 2027+.
-- Boolean + **Smart Bevel**. Array (surface / Z-growth / spline pack). Field Helper, Data Channel, Volume Select. Noise Plus at tiny amplitude.
-- `objXRefMgr` for source modules. Instances in assembly.
-- USD 0.14 and FBX as interchange — engine adapter problem, not the kit problem.
+**Law:** a tool needs a kit job it unblocks.
 
-**Tools we are allowed to author** (when stock is the ceiling)
-
-| Class | Examples | When |
+| Tool | Job | Status |
 |---|---|---|
-| UV | Packer, trim-aware layout, texel lock, stacked modular UVs, UV2 lightmap, seam policy | Stock Unwrap cannot hit studio grade on the kit |
-| Mesh ops | Chamfer **profiles** (width/depth curves, by-ID, by-angle, post-boolean), smarter than Chamfer/Smart Bevel alone | Bevels are ugly, inconsistent, or un-directable |
-| UI | PySide6 dockers: kit brief, ID painter, socket/pivot HUD, QA report | Scripts exist but the artist/agent loop is clumsy |
-| Scene | Naming, grid, layer, XRef, instance audit | Always in slice 1 bootstrap |
-| C++ / .NET | Modifiers, mesh algos Max Python cannot do at speed | Only if pymxs is actually too slow or too closed. SDK: .NET 10, C++20, Qt 6.8.3 |
+| Scene bootstrap | Units (m display / cm system), grid, snap, naming, layers | Slice 1 |
+| UV solver | Artist-grade, kit-aware packing / trim / texel / UV2 | When Unwrap fails the bar |
+| Chamfer profiles | Directable bevels (by ID, angle, post-boolean, width/depth curves) | When Smart Bevel/Chamfer lie |
+| **Field Tracing Displacement** | Build **real polys** from displacement/height — geo where the field actually displaces, not uniform tessellation. Lets texture displacement become performant kit mesh. | When a kit is waiting on it |
+| UI dockers | Brief, IDs, sockets, QA | When the loop is clumsy |
 
-**Law:** a new tool needs a kit job it unblocks. We do not start PolyCraft by writing a chamfer product. We start by making kits possible; we extend Max the first time the kit is waiting on the tool.
-
-Keep the modifier stack alive until the plan says collapse.
+Field Tracing Displacement is the right kind of idea: it raises craft and performance together. It is not slice 1 unless the first proving-ground kit is blocked without it.
 
 ---
 
-## 7. Taste bar
+## 7. Taste bar (Blizzard studio)
 
-- Read at the camera the brief named (per-kit, not per-engine).
+- The kit would survive a lead review at a studio that shipped Sanctuary, not an asset-store review.
+- Read at the camera the brief named.
 - Massing first. Ornament rides on structure.
-- Wear has a story. Cavity noise is not weathering.
+- Wear has a story.
 - Modules hide the module.
-- One strong material story per kit family.
-- Answer the concept/sheet.
-- An assembler can build a room without fighting pivots.
+- Concept and world are answered, not “inspired by.”
+- An assembler can build the space without fighting pivots.
 
 Pass/fail plus a written note. “Pretty good” is not a grade.
 
@@ -145,25 +156,29 @@ Pass/fail plus a written note. “Pretty good” is not a grade.
 
 ## 8. Visual QA
 
-**Technical:** grid, names, pivots, on-grid dimensions, mating sockets, density, MatID coverage, UV policy (including whether UV2 is required for a Source handoff), instance/XRef vs illegal copies.
+**Technical:** system/display units match this file, on-grid meters, names, pivots, mating sockets, density, MatIDs, UV policy, instance/XRef vs copies.
 
-**Taste:** ortho shaded/wire/checker, assembled vignette at gameplay camera, wear/trim/hero closeups, vs concept, three-module stale test.
+**Taste:** ortho shaded/wire/checker, assembled vignette at gameplay camera, wear/trim/hero, vs concept, three-module stale test, **does this kit only work for this place’s story**.
 
-Cloud cannot run Max. Scripts and plugins run locally. We review contracts + images.
+Cloud cannot run Max. Local scripts + images.
 
 ---
 
-## 9. Roles (Cursor, not Grok Bots)
+## 9. Roles (a studio, not a bot org)
 
-Skills + subagents in this repo. Stronger Grok on taste later; faster Grok on mechanical QA. No parallel Grok Bot org.
+Same git, same brief. Skills + subagents. Stronger Grok on AD/world later if useful.
 
 | Role | Job |
 |---|---|
-| Kit planner | Grid, sockets, IDs, module set |
-| Max TD | pymxs, plugins, modifiers, XRef |
-| UV lead | Artist-grade solve + when to use PolyMesh vs our solver |
-| Art director | Taste, stale test, nuance |
+| Worldbuilder | Place, story, player path, kill list |
+| Art director | Silhouette, material story, wear, references, stale |
+| Env art lead | Kit as language: modules, IDs, trims, hero vs filler |
+| Modeler | Max craft, modifiers, instances |
+| UV lead | Artist-grade solve |
+| Max TD | pymxs, plugins, units lock |
 | QA | Fail closed |
+
+These are hats in the thought process even when one agent wears several. The AD hat speaks before the modeler hat.
 
 ---
 
@@ -173,53 +188,40 @@ Skills + subagents in this repo. Stronger Grok on taste later; faster Grok on me
 
 | # | Question | Status | Answer |
 |---|---|---|---|
-| I1 | Name? | **Locked** | **PolyCraft**. PolyKit = the kit. |
-| I2 | v1 user? | **Locked** | You + agents here. Others after proof. |
-| I3 | Slice 1 success? | Proposed | Frozen constitution + Max 2027 bootstrap (menu, grid, naming) + kit schema + one named brief. Tools beyond bootstrap only if that brief is blocked. |
+| I1 | Name? | **Locked** | PolyCraft. PolyKit = the kit. |
+| I2 | v1 user? | **Locked** | You + agents here. |
+| I3 | Slice 1? | Proposed | Constitution + units bootstrap + world/AD skill + kit schema + one named brief (no hero mesh). |
 
 ### Ecosystem
 
 | # | Question | Status | Answer |
 |---|---|---|---|
 | E1 | Polygen? | Proposed | Consume style / kit-sheet. Do not reimplement generate. |
-| E2 | PolyMesh? | **Locked** | ML product (decimation + UV understanding). Sibling, not our UV department. |
-| E3 | Our UVs? | **Locked** | Agentic artist-grade UV solve is in scope, including new Max UV tools. |
-| E4 | PolyMat? | Proposed | Authors sheets. We plan IDs and layouts to use them. |
-| E5 | New Max plugins? | **Locked** | Yes, as needed to elevate craft. Not a plugin studio for its own sake. |
-| E6 | Kingdom Crafter? | Proposed | One destination for a proven kit. |
+| E2 | PolyMesh? | **Locked** | ML sibling. Not our UV department. |
+| E3 | UVs? | **Locked** | Agentic artist-grade solve here. |
+| E4 | Plugins? | **Locked** | As needed. Field Tracing Displacement is cataloged, not pre-built. |
+| E5 | PolyMat? | Proposed | Sheets we plan IDs/UVs to use; displacement maps may later feed Field Tracing. |
 
-### Craft defaults
-
-| # | Question | Status | Answer |
-|---|---|---|---|
-| C1 | Engines? | **Locked** | Unreal + Source as destinations. Kits first, engine-agnostic. |
-| C2 | Canonical units? | Proposed | 1 Max unit = 1 cm. Scale at Source export. |
-| C3 | Default module? | Open | 200 / 400 cm is a common start — confirm per first kit |
-| C4 | QA camera? | Open | Per-kit. D4-like vs FPS changes massing. |
-| C5 | Collision / Nanite / LOD? | Proposed | Engine adapters; not slice 1. |
-| C6 | First proving-ground kit? | Open | One interior kit with a real module set, not a platform of kits |
-| C7 | Drive Max how? | Proposed | Local pymxs / MAXScript / plugins from git contracts. No pretend-Max in the cloud. |
-
-### Product surface
+### Craft
 
 | # | Question | Status | Answer |
 |---|---|---|---|
-| P1 | Web app in v1? | Proposed | **No.** |
-| P2 | MCP in v1? | Proposed | No. |
-| P3 | Bootstrap scripts in v1? | Proposed | Yes. |
-| P4 | Custom UV/chamfer plugins in v1? | Proposed | Charter yes. Build when the first kit proves stock Max is the limiter. |
+| C1 | Engines? | **Locked** | Unreal + Source destinations. Kits first. |
+| C2 | Units? | **Locked** | Display meters (`1.0` = 1 m). System cm. UE: 4 m → 400 uu. |
+| C3 | Default module? | Open | Per first kit. 2 m / 4 m is the usual conversation. |
+| C4 | Camera? | Open | Per-kit. World/AD pass names it. |
+| C5 | First kit? | Open | Needs a place and a story, not a generic dungeon. |
+| C6 | Drive Max? | Proposed | Local pymxs / plugins from git. No pretend-Max in the cloud. |
 
 ---
 
 ## 11. Slice 1 (if you sign the rest)
 
 1. Freeze this document.
-2. Skills: kit-plan, max-2027-craft, artist-UV, visual-QA, taste, when-to-plugin.
-3. `kit.schema.json`.
-4. Max 2027 bootstrap: units/grid/snap/layers/naming/menu.
-5. One named PolyKit brief — no hero detailing, no engine export project.
-
-No website. No bot platform. No Unreal/Source plugin as the first artifact.
+2. Skills: worldbuilding, art-direction, kit-plan, max-2027-craft (including units lock), artist-UV, visual-QA.
+3. `kit.schema.json` that **requires** world/AD fields, not just a module table.
+4. Max bootstrap: display meters, system cm, grid/snap, naming, menu.
+5. One proving-ground brief — a real place — still no hero detailing, no Field Tracing plugin yet.
 
 ---
 
@@ -227,13 +229,11 @@ No website. No bot platform. No Unreal/Source plugin as the first artifact.
 
 - [x] Name: PolyCraft
 - [x] v1 audience
-- [x] PolyMesh = ML sibling, not our UV department
-- [x] Agentic UV solve in scope
-- [x] New Max tools/plugins allowed
-- [x] Engines = Unreal + Source, kits first / agnostic
-- [ ] Canonical units (cm proposed)
-- [ ] Polygen / PolyMat / Kingdom Crafter remainder
+- [x] Units: meters in Max, cm-based for UE
+- [x] Engines: Unreal + Source, kits first
+- [x] Agentic UV + plugins-as-needed (incl. Field Tracing Displacement, later)
+- [x] Blizzard-level AD / worldbuilding / env team process
 - [ ] Slice 1 scope
-- [ ] First proving-ground kit named (world, camera, module size)
+- [ ] First proving-ground kit: **place, story, camera, module size**
 
 Until the empty boxes are checked, agents may only revise this agreement.

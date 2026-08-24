@@ -1,15 +1,9 @@
 # PolyCraft
 
-Agentic 3ds Max **2027** craft for artist-grade modular kits (**PolyKits**).
+Agentic 3ds Max **2027** craft for artist-grade kits (**PolyKits**).
 
-v1 is **Ethan + agents in this repo**. Destinations later: **Unreal Engine** and **Source Engine**. The craft itself is kit-first and engine-agnostic: models, IDs, organization, module planning, Blizzard-level nuance, artist-grade UVs.
+v1 is Ethan + agents here. **1.0 in Max = 1 meter** (display meters, system centimeters — Unreal stays 1 cm/uu). Destinations: Unreal and Source, after the kit is true.
 
-We may author new Max tools and plugins when stock Max is the ceiling. [PolyMesh](https://www.3dpolygen.com) is a sibling ML product (decimation, UV understanding) — not our UV department.
+Planning is Blizzard-studio order: worldbuilding and art direction, then env art and modeling. Tools and plugins exist when they unblock that craft.
 
-**Status:** vision lock. [`docs/VISION.md`](docs/VISION.md) is the agreement. Do not model or ship a product until remaining sign-off boxes are checked.
-
-## Host
-
-- 3ds Max **2027** (R29, `maxVersion` `29000`)
-- pymxs, PySide6, `qtmax`
-- C++ / .NET 10 plugins only when Python cannot do the job
+**Status:** vision lock. [`docs/VISION.md`](docs/VISION.md). Remaining gate: slice 1 + first proving-ground place.
